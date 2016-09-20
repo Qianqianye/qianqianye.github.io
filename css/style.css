@@ -583,17 +583,19 @@ b, strong { font-weight: bold; }
 
 	#header h1 {
 		color: #ccc;
-		font-size: 120px;
+		font-size: 140px;
 		line-height: 34px;
+		/*font-weight: normal;*/
 		
 
 	}
 
 	#header p.site-desc {
 		color: #ccc;
-		font-size: 12px;
+		font-size: 13px;
 		line-height: 19px;
-		padding: 120px 20px 30px 0px; 
+		padding: 140px 00px 00px 0px; 
+		
 
 	}
 
@@ -1051,7 +1053,7 @@ b, strong { font-weight: bold; }
 	}
 
 		.cart-header > div {
-			padding: 10px 0; 
+			padding: 20px 0; 
 			border-top: 1px solid #f5f5f5; 
 			border-bottom: 1px solid #f5f5f5;
 		}
