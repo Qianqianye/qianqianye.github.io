@@ -1,9 +1,17 @@
 
 <!DOCTYPE html>
-<html>
-	<head>
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
 	<title>Q's website via github</title>
 	<meta charset="utf-8">
+	<meta name="description" content=".">
+	<meta name="author" content="">
+	
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/cssreset-min.css">
 	<link rel="stylesheet" type="text/css" href="css/typegrid.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -13,9 +21,10 @@
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-	</head>
+</head>
 
-	<body>
+<body>
+
 
 	<!-- Header - Q
 	================================================== -->
@@ -93,78 +102,86 @@
 		</div><!-- // .logo-wrap -->
 	</section><!-- // #header -->
 
-
-	<!-- Works
+	<!-- Contact
 	================================================== -->
-	<section id="works">
+	<section id="contact" class="section page">
 		<div class="container">
-			<div class="desktop-12 columns"><div class="border-top"></div></div>
 
-				<a href="https://qianqianye.github.io/sfbikerackcount2015/" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item first-row">
-							<h3>SF Bike parking</h3>
-							<span class="category">Data Visualization</span>
+			<div class="desktop-6 tablet-12 columns">
 
-							<img src="images/SF_bikeparking.gif" alt="" />
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
-							
-				<a href="https://qianqianye.github.io/2015-People-killed-by-police/" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item first-row">
-							<h3>2015 People Killed By Police</h3>
-							<span class="category">Data Visualization</span>
+				<h2 class="border-top">Contact</h2>
+				<p class="title-desc">Say <a href='https://en.wiktionary.org/wiki/hej'><span class="font-color-primary">Hej</span></a> to Me.</p>
 
-							<img src="images/2015_People_killed_by_police.gif" alt="" />
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
+
 				
+				<form name="contactForm" id="contactForm" method="post" action="">
+					<fieldset>
+					
+						<label for="contactName">Name <span class="required">*</span></label>
+						<input name="contactName" type="text" id="contactName" size="30" value="" />
+						
+						<br />
+						<label for="contactEmail">Email <span class="required">*</span></label>
+						<input name="contactEmail" type="text" id="contactEmail" size="30" value="" />
+                        
+                        <br />
+						<label for="contactMessage">Message <span class="required">*</span></label>
+						<textarea name="contactMessage" id="contactMessage" rows="6" cols="7"></textarea>
+                        
+                        <br />
+						<label for="contactCaptcha"><strong>4</strong> + <strong>7</strong> = <span class="required">*</span></label>
+						<input name="contactCaptcha" type="text" id="contactCaptcha" size="30" value="" />
 
-				<a href="https://qianqianye.github.io/Everyday/Day8/Day8.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item first-row">
-							<h3>Particles and Colors</h3>
-							<span class="category">Code for Fun</span>
+						<input name="contactCaptchaAnswer" type="hidden" id="contactCaptchaAnswer" value="11" />
 
-							<img src="images/Particles_and_color_modes.gif" alt="" />
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
-				
-				<a href="https://qianqianye.github.io/Everyday/Day6/Day6.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item first-row">
-							<h3>Visual + Audio</h3>
-							<span class="category">Code for Fun</span>
-
-							<img src="images/visual_and_audio_experiment.gif" alt="" />
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
+						<br />
+						<label class="placeholder">&nbsp;</label>
+						<input type="submit" class="button full" value="Hej, Q!" />
+					</fieldset>
+				</form>
 				
 				<div class="clear"></div>
 
-				<a href="https://qianqianye.github.io/Everyday/Day1/Day1.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item first-row">
-							<h3>Geometry Experiment</h3>
-							<span class="category">Code for Fun</span>
-
-							<img src="images/1_rotating_geometry_via_threejs.gif" alt="" />
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>			
+			</div><!-- // .desktop-6 -->
 			
+			<div class="desktop-6 tablet-12 nested columns">
+				
+				<div class="desktop-6 tablet-12 columns">
+					<!-- <h2 class="border-top">Location</h2>
+					<p class="title-desc">At the heart of SF</p> -->
+
+					<!-- <div id="map"></div> -->
+				</div><!-- // .desktop-6 -->
+
+				<div class="clear"></div>
+
+				<div class="desktop-3 tablet-6 mobile-half columns">
+					
+
+				</div><!-- // .desktop-3 -->
+
+				<div class="desktop-3 tablet-6 mobile-half columns">
+					
+					<div class="box-contact">
+						<h3 class="font-color-primary"><span class="underline">Email</span></h3>
+
+						<p>
+							<a href="mailto:qianqian.ye44@gmail.com">qianqian.ye44@gmail.com</a>
+						</p>
+					</div><!-- // .box-contact -->
+
+				</div><!-- // .desktop-3 -->
+
+				<div class="clear"></div>
+
+			</div><!-- // .desktop-6 -->
+
 		</div><!-- // .container -->
-	</section><!-- // section#works -->
+	</section><!-- // section#contact -->
 
 
-
-
-
+	<!-- JS
+	================================================== -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 	<script src="js/jQuery.BlackAndWhite.min.js"></script>
 	<script src="js/modernizr.js"></script>
@@ -172,5 +189,7 @@
 	<script src="js/jquery.typeMenu.js"></script>
 	<script src="js/jquery.typeSticky.js"></script>
 	<script src="js/jquery.custom.js"></script>
-	</body>
-	</html>
+<!-- End Document
+================================================== -->
+</body>
+</html>

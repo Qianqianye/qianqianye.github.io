@@ -585,6 +585,7 @@ b, strong { font-weight: bold; }
 		color: #ccc;
 		font-size: 140px;
 		line-height: 34px;
+		padding: 90px 00px 00px 0px; 
 		/*font-weight: normal;*/
 		
 
@@ -594,7 +595,7 @@ b, strong { font-weight: bold; }
 		color: #ccc;
 		font-size: 13px;
 		line-height: 19px;
-		padding: 140px 00px 00px 0px; 
+		padding: 140px 00px 60px 0px; 
 		
 
 	}
