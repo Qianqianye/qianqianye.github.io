@@ -13,6 +13,7 @@
                 renderer.setSize( W, H );
                 renderer.setClearColor( 0x000000, 0 ); // the default
                 document.body.appendChild( renderer.domElement );
+                renderer.domElement.id = "CanvasThreeJS";
 
                 camera = new THREE.PerspectiveCamera( 10, W/H, 0.01, 10000 );
                 camera.position.set( 0, 0, 100 );
@@ -30,14 +31,17 @@
                 mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
                 mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
-                // Make the sphere follow the mouse
+                // Make the geometry follow the mouse
                 var vector = new THREE.Vector3(mouse.x, mouse.y, 0);
+
                 vector.unproject( camera );
                 var dir = vector.sub( camera.position ).normalize();
                 var distance = - camera.position.z / dir.z;
+
                 var pos = camera.position.clone().add( dir.multiplyScalar( distance ) );
+
                 mesh.position.copy(pos);
-                
+
             };
 
             function draw() {
