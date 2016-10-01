@@ -156,7 +156,7 @@ b, strong { font-weight: bold; }
 	/* Used frequently to apply a light border on top */
 	.border-top {
 		border-top: 1px solid #f5f5f5;
-		padding-top: 30px;
+		padding-top: 20px;
 	}
 
 
@@ -339,7 +339,7 @@ b, strong { font-weight: bold; }
 			}
 		}
 
-	.page p { margin-top: 30px; }
+	.page p { margin-top: 2px; }
 
 
 
@@ -770,7 +770,7 @@ a, a:hover {
 		line-height: 42px;
 	}
 
-	#about .services .item { padding: 30px 0; }
+	#about .services .item { padding: 20px 0; }
 
 	#about .services h4 {
 		font-size: 16px;
@@ -783,7 +783,7 @@ a, a:hover {
 	#about .services p {
 		font-size: 15px;
 		line-height: 28px;
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 
 	@media screen and (max-width: 767px) {
@@ -910,7 +910,7 @@ a, a:hover {
 	}
 
 		#works.single img { 
-			margin-bottom: 60px; 
+			margin-bottom: 20px; 
 		}
 
 		#works.single .box-info {
@@ -933,11 +933,11 @@ a, a:hover {
 			}
 
 				#works.single .box-info h4.border-top {
-					padding-top: 20px; 
+					padding-top: 10px; 
 				}
 
 			#works.single .box-info p {
-				margin-top: 15px; 
+				margin-top: 10px; 
 			}
 
 			@media screen and (max-width: 767px) {
