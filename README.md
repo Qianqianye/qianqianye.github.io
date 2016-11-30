@@ -1,4 +1,3 @@
 # Qianqian Ye Website Via `Github`
-qianqian-ye.com
 
-qianqianye.github.io
+[qianqian-ye.com](http://www.qianqian-ye.com/)
