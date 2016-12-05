@@ -759,6 +759,10 @@
   .mobile-half {
     width: 50%;
   }
+
+  .mobile-full {
+    width: 100%;
+  }
 }
 /* Mobile - Landscape */
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -824,6 +828,9 @@
   }
   .mobile-half {
     width: 50%;
+  }
+  .mobile-full {
+    width: 100%;
   }
 }
 .show-on-widescreen,
