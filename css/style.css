@@ -640,8 +640,8 @@ a, a:hover {
 	.title-home-desc {
 		text-align: center;
 		color: #ccc;
-		font-size: 18px;
-		line-height: 22px;
+		font-size: 14px;
+		line-height: 28px;
 		position: relative;	
 		padding: 0px 0px 50px 0px; 
 	}
@@ -649,8 +649,8 @@ a, a:hover {
 	.title-desc {
 		/*text-align: center;*/
 		color: #ccc;
-		font-size: 18px;
-		line-height: 22px;
+		font-size: 14px;
+		line-height: 18px;
 		position: relative;	
 		padding: 0px 0px 50px 0px; 
 	}
