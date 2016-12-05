@@ -421,7 +421,7 @@ b, strong { font-weight: bold; }
 	---------------------------------------------------*/
 
 	ul#nav {
-		font-size: 12px;
+		font-size: 18px;
 		line-height: 21px;
 		font-weight: bold;
 		overflow: visible;
@@ -630,8 +630,8 @@ a, a:hover {
 	.title-home {
         text-align: center;
         text-transform: uppercase;
-        font-size: 200px;
-        font-weight: 5;
+        font-size: 240px;
+        font-weight: 3;
         padding: 120px 0px 100px 0px; 
         position: relative;		
 	}
@@ -644,8 +644,8 @@ a, a:hover {
 	.title-home-desc {
 		text-align: center;
 		color: #ccc;
-		font-size: 13px;
-		line-height: 19px;
+		font-size: 22px;
+		line-height: 28px;
 		position: relative;	
 		padding: 0px 0px 50px 0px; 
 	}
