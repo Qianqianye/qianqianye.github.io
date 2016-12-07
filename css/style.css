@@ -616,42 +616,56 @@ a, a:hover {
 
 		#header .logo-wrap {  }
 
-	.title {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 200px;
-        font-weight: 5;
-        padding: 10px 0px 20px 0px; 
-        position: relative;		
+a, a:hover {
+	text-decoration: none;
+}
+
+	.title { 
+        padding: 110px 0px 35px 0px; 
+        position: relative;
+        background:transparent url('../images/YE-Studio-logo-small.png') center top 5px no-repeat;	
 	}
-	@media screen and (max-width: 767px) { 
-		.title {
-		text-align: center;
-        text-transform: uppercase;
-        font-size: 200px;
-        font-weight: 5;
-        padding: 0px 0px 20px 0px; 
-        position: relative;				
-		}
+	.title:hover{
+   		background-image: url('../images/YE-Studio-logo-small-black.png');
 	}
 
+	@media screen and (max-width: 767px) { 
+		.title { 
+        padding: 110px 0px 35px 0px; 
+        position: relative;
+        background:transparent url('../images/YE-Studio-logo-small.png') center top 5px no-repeat;	
+	}
+	.title:hover{
+   		background-image: url('../images/YE-Studio-logo-small-black.png');
+	}
+	}
+
+	
 	.title-home {
         text-align: center;
         text-transform: uppercase;
         font-size: 200px;
         font-weight: 5;
-        padding: 130px 0px 30px 0px; 
+        padding: 280px 0px 130px 0px; 
         position: relative;		
+		background:transparent url('../images/YE-Studio-logo.png') center top 145px no-repeat;	
+	}
+	.title-home:hover{
+   		background-image: url('../images/YE-Studio-logo-black.png');
 	}
 	@media screen and (max-width: 767px) { 
 		.title-home {
-			text-align: center;
+        text-align: center;
         text-transform: uppercase;
         font-size: 200px;
         font-weight: 5;
-        padding: 40px 0px 30px 0px; 
+        padding: 280px 0px 30px 0px; 
         position: relative;		
-		}
+		background:transparent url('../images/YE-Studio-logo.png') center top 30px no-repeat;	
+	}
+	.title-home:hover{
+   		background-image: url('../images/YE-Studio-logo-black.png');
+	}
 	}
 	
 
