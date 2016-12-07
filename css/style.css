@@ -672,10 +672,10 @@ a, a:hover {
 		.title-home-desc {
 		text-align: center;
 		color: #999;
-		font-size: 12px;
+		font-size: 13px;
 		line-height: 16px;
 		position: relative;	
-		padding: 0px 45px 30px 45px; 
+		padding: 0px 45px 15px 45px; 
 	}
 	}
 
