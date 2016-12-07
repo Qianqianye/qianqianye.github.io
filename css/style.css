@@ -666,7 +666,17 @@ a, a:hover {
 		font-size: 14px;
 		line-height: 18px;
 		position: relative;	
-		padding: 0px 50px 30px 50px; 
+		padding: 0px 45px 30px 45px; 
+	}
+	@media screen and (max-width: 767px) { 
+		.title-home-desc {
+		text-align: center;
+		color: #999;
+		font-size: 12px;
+		line-height: 16px;
+		position: relative;	
+		padding: 0px 45px 30px 45px; 
+	}
 	}
 
 	.title-desc {
