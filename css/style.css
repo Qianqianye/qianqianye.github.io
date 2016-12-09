@@ -953,8 +953,13 @@ a, a:hover {
 	}
 
 		#works.single img { 
-			margin-bottom: 20px; 
+			margin-bottom: 20px;
+			min-width: 100%;
+			max-width: 100%;
+    		height: auto;
 		}
+
+
 
 		#works.single .box-info {
 			margin-bottom: 20px; 
