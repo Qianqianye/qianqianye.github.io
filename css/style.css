@@ -29,7 +29,7 @@ body {
 	/*font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 	font-family: "Roboto", sans-serif;
 	font-size: 14px;
-	line-height: 18px;
+	line-height: 22px;
 	-webkit-font-smoothing: antialiased;
 	/* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
@@ -190,7 +190,7 @@ b, strong { font-weight: bold; }
 		.button.small,
 		a.button.small {
 			font-size: 14px;
-			line-height: 24px;
+			line-height: 22px;
 			padding: 16px 24px;
 			-webkit-border-radius: 3px;
 			-moz-border-radius: 3px;
@@ -678,7 +678,7 @@ a, a:hover {
 		text-align: center;
 		color: #999;
 		font-size: 14px;
-		line-height: 18px;
+		line-height: 22px;
 		position: relative;	
 		padding: 10px 45px 20px 45px; 
 	}
@@ -957,15 +957,16 @@ a, a:hover {
 		}
 
 		#works.single .box-info {
-			margin-bottom: 40px; 
+			margin-bottom: 20px; 
 			font-size: 14px;
-			line-height: 25px;
+			line-height: 22px;
 		}
 			
 			#works.single .box-info p.project-desc {
 				color: #ddd; 
 				font-weight: bold; 
 				margin-top: 0; 
+				margin-bottom: : 0;
 			}
 
 			#works.single .box-info h4 {
@@ -1471,14 +1472,14 @@ a, a:hover {
 
 		section#contact .box-contact {
 			font-size: 14px;
-			line-height: 28px;
+			line-height: 22px;
 			background-size: cover;
 		}
 
 			section#contact .box-contact h3 {
 				color: #22eedd;
 				font-size: 14px;
-				line-height: 24px;
+				line-height: 22px;
 				font-weight: normal;
 				margin-bottom: 15px;
 			}
