@@ -585,7 +585,7 @@ a, a:hover {
 
 .socialbtns, .socialbtns ul, .socialbtns li {
   margin: 0;
-  padding: 5px;
+  padding: 5px 5px 15px 5px; 
 }
 
 .socialbtns li {
@@ -597,7 +597,8 @@ a, a:hover {
 	width: 40px;
     height: 28px;
 	color: #000;
-	background-color: #FFF;
+	/*background-color: #FFF;*/
+	background: rgba(255, 255, 255, 0.5);
 	border: 1px solid #000;
 	padding-top: 12px;
 	border-radius: 22px;
@@ -886,6 +887,10 @@ a, a:hover {
 			width: 100%; 
 		}
 
+		img:hover {
+			opacity: 0.5;
+		}
+
 	@media screen and (min-width: 1600px) { 
 		#works.stackgrid .item { width: 20%; }
 	}
@@ -958,6 +963,7 @@ a, a:hover {
 			max-width: 100%;
     		height: auto;
 		}
+
 
 
 
