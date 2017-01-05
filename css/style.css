@@ -42,8 +42,22 @@ body {
 	}
 }
 
+iframe.test-test {
+	width: 100%;
+	height: 360px;
+}
 
+@media (max-width: 767px) {
+	iframe.test-test {
+		height: 220px;
+	}
+}
 
+@media (max-width: 479px) {
+	iframe.test-test {
+		height: 148px;
+	}
+}
 
 
 
