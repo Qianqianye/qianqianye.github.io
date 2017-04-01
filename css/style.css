@@ -149,6 +149,8 @@ b, strong { font-weight: bold; }
 	/* Responsive images */
 	img { max-width: 100%; }
 
+	thumbnail { max-width: 100%; }
+
 
 	/* Used to remove whitespace below an image */
 	.remove-line-height { line-height: 0; }
@@ -173,6 +175,8 @@ b, strong { font-weight: bold; }
 
 	/* Featured image */
 	.post img.featured { margin-bottom: 50px; }
+
+	.post thumbnail.featured { margin-bottom: 50px; }
 
 
 
@@ -900,9 +904,18 @@ a, a:hover {
 			width: 100%; 
 		}
 
+		#works.stackgrid .item thumbnail {
+			width: 100%; 
+		}
+
 		
 
 		img:hover {
+			opacity: 0.7;
+		}
+
+
+		thumbnail:hover {
 			opacity: 0.5;
 		}
 
@@ -973,6 +986,13 @@ a, a:hover {
 	}
 
 		#works.single img { 
+			margin-bottom: 20px;
+			min-width: 100%;
+			max-width: 100%;
+    		height: auto;
+		}
+
+		#works.single thumbnail { 
 			margin-bottom: 20px;
 			min-width: 100%;
 			max-width: 100%;
@@ -1738,6 +1758,11 @@ a, a:hover {
 		width: 100%;
 	}
 
+	.flexslider .slides thumbnail {
+		display: block;
+		width: 100%;
+	}
+
 	.flex-pauseplay span { text-transform: capitalize; }
 
 	/* Clearfix for the .slides element */
@@ -1881,7 +1906,19 @@ a, a:hover {
 			cursor: pointer;
 		}
 
+		.flex-control-thumbs thumbnail {
+			width: 100%;
+			display: block;
+			opacity: .7;
+			cursor: pointer;
+		}
+
+
 		.flex-control-thumbs img:hover { opacity: 1; }
+
+		.flex-control-thumbs thumbnail:hover { opacity: 1; }
+
+
 		.flex-control-thumbs .flex-active {
 			opacity: 1;
 			cursor: default;
