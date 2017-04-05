@@ -1023,7 +1023,7 @@ a, a:hover {
 
 		#works.single box-content { padding-top: 30px; }
 
-		#works.single h4 {
+		#works.single .box-content h4 {
 		color: #595959;
 		font-family: 'Roboto Slab', Georgia, serif;
 		/*font-style: thin; */
@@ -1042,9 +1042,22 @@ a, a:hover {
 
 
 		@media screen and (max-width: 959px) { 
+
 		#works.single  p {
 			font-size: 13px;
+			line-height: 22px;
+		}
+
+		@media (max-width: 479px) {
+		#works.single .box-content  h4 {
+			font-size: 20px;
 			line-height: 25px;
+		}
+
+		#works.single  p {
+			font-size: 13px;
+			line-height: 18px;
+		}
 		}
 
 		#works.single box-content { border-top: none; }
@@ -1118,6 +1131,18 @@ a, a:hover {
 		#works.single  blockquote p {
 			font-size: 22px;
 			line-height: 40px;
+		}
+	}
+
+		@media screen and (max-width: 479px) { 
+		#works.single  blockquote p {
+			font-size: 17px;
+			line-height: 20px;
+		}
+
+		#works.single  blockquote footer { 
+			font-size: 12px;
+			line-height: 20px;
 		}
 	}
 
