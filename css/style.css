@@ -59,7 +59,23 @@ iframe.test-test {
 	}
 }
 
+video.test-test {
+	width: 100%;
+	height: 480px;
+}
 
+@media (max-width: 767px) {
+	video.test-test {
+		height: 450px;
+	}
+}
+
+@media (max-width: 479px) {
+	video.test-test {
+		width: 100%;
+		height: 400px;
+	}
+}
 
 /*--------------------------------------------------------------------------
 	2. Typography
