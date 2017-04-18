@@ -1054,9 +1054,11 @@ a, a:hover {
 		#works.single box-content { padding-top: 30px; }
 
 		#works.single .box-content h4 {
-		color: #595959;
-		font-family: 'Roboto Slab', Georgia, serif;
-		/*font-style: thin; */
+		/*color: #595959;*/
+		color: #000000;
+		/*font-family: 'Roboto Slab', Georgia, serif;*/
+		font-family: 'Gotham SSm B', Arial,sans-serif;
+		/*font-weight: bold;*/
 		font-size: 30px;
 
 		/*font-size: 26px;*/
@@ -1065,7 +1067,7 @@ a, a:hover {
 		margin-top: 12px;
 		margin-bottom: 8px;
 		line-height: 30px;
-		font-weight: 100; 
+		font-weight: 110; 
 	}
 
 
