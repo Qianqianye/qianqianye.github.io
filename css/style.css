@@ -77,6 +77,24 @@ video.test-test {
 	}
 }
 
+video.wide-test {
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 767px) {
+	video.wide-test {
+		height: 100%;
+	}
+}
+
+@media (max-width: 479px) {
+	video.wide-test {
+		width: 100%;
+		height: 100%;
+	}
+}
+
 /*--------------------------------------------------------------------------
 	2. Typography
 --------------------------------------------------------------------------*/
