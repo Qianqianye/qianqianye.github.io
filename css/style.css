@@ -38,6 +38,14 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+.specialParagraph{
+   font-size: 0.85em;
+    line-height: 1.2;
+    font-style: italic;
+/*    border: 1px solid red;*/
+}
+
+
 @media screen and (max-width: 767px) {
     body {
         font-size: 12px;
