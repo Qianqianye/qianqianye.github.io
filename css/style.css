@@ -637,27 +637,23 @@ span.required {
 	---------------------------------------------------*/
 .topbar {
     display: flex;
-/*    border: solid 3px yellow;*/
     padding: 45px 20px 30px 20px;
-/*    padding-right: 20px*/
-    
+    position: relative;
+    align-items: flex-start;
 }
 
 #header-site-title {
     font-size: 24px;
     font-weight: 500;
     height: 30px;
-/*    width: 30vw;*/
-/*    border-bottom: solid 1px red ;;*/
-/*        border: solid 3px red ;*/
-
+    line-height: 1;
 }
-#header-nav-wrapper{
+
+#header-nav-wrapper {
    margin-left: auto;
-/*    border: solid 3px green;  */
+    display: flex;
+    align-items: flex-start;
 }
-
-
 
 ul#nav {
     font-size: 16px;
@@ -799,40 +795,71 @@ ul#nav > li ul ul {
 
 @media screen and (max-width: 767px) {
     #menu-mobile-wrapper {
-/*        display: block;*/
         display: flex;
-/*        border: solid 3px green;*/
-        width:10vw;
+        flex-direction: column;
+        align-items: flex-end;
         margin-left: auto;
+        padding-top: 0;
+        width: auto;
+    }
+
+    #header-nav-wrapper {
+        flex-direction: column;
+        align-items: flex-end;
+        min-width: 200px; /* Ensure enough space for menu items */
+    }
+
+    #header-nav-wrapper ul#nav {
+        display: none;
     }
 }
 
 #menu-mobile-wrapper #toggle-menu {
     cursor: pointer;
     color: #222;
-/*    display: block;*/
-    font-size: 0;
-/*    line-height: 25px;*/
-/*    padding: 20px 0 20px 30px;*/
-    background: url('../images/menu_open.png') no-repeat right;
-/*    border-bottom: 0px solid #f5f5f5;*/
-/*    border: solid red 2px;*/
+    font-size: 20px;
+    padding: 0;
+    z-index: 2;
+    line-height: 1;
+    height: 24px;
+    display: flex;
+    align-items: center;
 }
 
-#menu-mobile-wrapper.toggle-open #toggle-menu {
-    background-image: url('../images/menu_closed.png');
+#menu-mobile-wrapper #toggle-menu:before {
+    font-family: 'FontAwesome';
+    content: '\f0c9';
+    display: block;
+}
+
+#menu-mobile-wrapper.toggle-open #toggle-menu:before {
+    content: '\f00d';
 }
 
 #menu-mobile-wrapper ul#menu-mobile {
     display: none;
-    margin-bottom: 15px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+    list-style: none;
+    max-height: 0;
     overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+
+#menu-mobile-wrapper.toggle-open ul#menu-mobile {
+    display: block;
+    max-height: none;
+    margin-top: 20px;
 }
 
 #menu-mobile-wrapper ul#menu-mobile li {
-    font-size: 12px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 1.5;
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 #menu-mobile-wrapper ul#menu-mobile li a {
@@ -840,7 +867,8 @@ ul#nav > li ul ul {
     display: block;
     padding: 12px 0;
     text-align: right;
-    border-bottom: 0px solid #f5f5f5;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 #menu-mobile-wrapper ul#menu-mobile li a:hover {
