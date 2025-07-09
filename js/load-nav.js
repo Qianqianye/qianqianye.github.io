@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize mobile menu functionality
     function initMobileMenu() {
-        console.log('Initializing mobile menu...');
+//        console.log('Initializing mobile menu...');
         const toggleMenu = document.getElementById('toggle-menu');
         const mobileWrapper = document.getElementById('menu-mobile-wrapper');
         const mobileMenu = document.getElementById('menu-mobile');
 
-        console.log('Elements found:', {
-            toggleMenu: !!toggleMenu,
-            mobileWrapper: !!mobileWrapper,
-            mobileMenu: !!mobileMenu
-        });
+//        console.log('Elements found:', {
+//            toggleMenu: !!toggleMenu,
+//            mobileWrapper: !!mobileWrapper,
+//            mobileMenu: !!mobileMenu
+//        });
 
         if (toggleMenu && mobileWrapper && mobileMenu) {
             toggleMenu.addEventListener('click', function(e) {
