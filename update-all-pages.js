@@ -1,59 +1,62 @@
 const fs = require('fs');
 const path = require('path');
 
-// Get all HTML files in the current directory
-const files = fs.readdirSync('.')
+// Read the template files
+const templateHead = fs.readFileSync('template-head.html', 'utf8');
+const navContent = fs.readFileSync('nav.html', 'utf8');
+
+// Get all HTML files except template files
+const htmlFiles = fs.readdirSync('.')
     .filter(file => file.endsWith('.html'))
-    .filter(file => !['nav.html', 'head-meta.html'].includes(file));
+    .filter(file => !['nav.html', 'head-meta.html', 'template-head.html'].includes(file));
 
-// Function to generate page title
-function getPageTitle(filename) {
-    if (filename === 'index.html') return 'Qianqian Ye - Artist, Creative Technologist & Educator';
-    
-    // Convert filename to title
-    const baseName = path.basename(filename, '.html');
-    const words = baseName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1));
-    return `${words.join(' ')} - Qianqian Ye`;
-}
+console.log(`Found ${htmlFiles.length} HTML files to update`);
 
-// New head section template
-const newHeadSection = `<head>
-    <meta charset="utf-8">
-    <title>PAGE_TITLE</title>
-    <script src="js/load-head-meta.js"></script>
-</head>`;
-
-// New header section template
-const newHeaderSection = `<section id="header">
-    <div class="container">
-        <!-- Navigation will be loaded here -->
-    </div>
-</section>
-
-`;
-
-// Process each file
-files.forEach(file => {
+htmlFiles.forEach(file => {
     console.log(`Processing ${file}...`);
+    
     let content = fs.readFileSync(file, 'utf8');
-
-    // Generate page title
-    const pageTitle = getPageTitle(file);
-
-    // Replace head section with the correct title
-    content = content.replace(/<head>[\s\S]*?<\/head>/i, newHeadSection.replace('PAGE_TITLE', pageTitle));
-
-    // Add header section after body tag if it doesn't exist
-    if (!content.includes('id="header"')) {
-        content = content.replace(/<body[^>]*>/, match => `${match}\n${newHeaderSection}`);
+    
+    // Find the head section and replace it with the optimized template
+    const headMatch = content.match(/<head>([\s\S]*?)<\/head>/);
+    if (headMatch) {
+        const currentHead = headMatch[1];
+        
+        // Extract the title from the current head
+        const titleMatch = currentHead.match(/<title>(.*?)<\/title>/);
+        const title = titleMatch ? titleMatch[1] : 'Qianqian Ye - Artist, Creative Technologist & Educator';
+        
+        // Create the new head with the title and template content
+        const newHead = `<head>
+    <title>${title}</title>
+${templateHead}
+</head>`;
+        
+        // Replace the head section
+        content = content.replace(/<head>[\s\S]*?<\/head>/, newHead);
+        
+        // Check if there's a header section that needs navigation
+        if (content.includes('<section id="header">')) {
+            // Replace the header section with navigation included
+            const headerMatch = content.match(/<section id="header">[\s\S]*?<\/section>/);
+            if (headerMatch) {
+                const newHeader = `<section id="header">
+        <div class="container">
+${navContent}
+        </div>
+    </section>`;
+                content = content.replace(/<section id="header">[\s\S]*?<\/section>/, newHeader);
+            }
+        }
+        
+        // Write the updated content back to the file
+        fs.writeFileSync(file, content, 'utf8');
+        console.log(`✓ Updated ${file}`);
+    } else {
+        console.log(`⚠ No head section found in ${file}`);
     }
+});
 
-    // Add load-nav.js script before closing body tag if it's not already there
-    if (!content.includes('load-nav.js')) {
-        content = content.replace('</body>', '    <script src="js/load-nav.js"></script>\n</body>');
-    }
-
-    // Write the updated content back to the file
-    fs.writeFileSync(file, content, 'utf8');
-    console.log(`Updated ${file}`);
-}); 
+console.log('\nAll files updated successfully!');
+console.log('\nNote: The navigation is now inlined in all pages for faster loading.');
+console.log('To update navigation in the future, run this script again.'); 
