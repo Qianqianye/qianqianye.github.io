@@ -1,0 +1,77 @@
+---
+// Shared page shell: <head> with per-page meta tags, header, and footer.
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const defaultTitle = 'Qianqian Ye - Artist, Designer & Creative Technologist';
+const defaultDescription =
+  'Qianqian Ye is a Chinese artist, designer and creative technologist based in Los Angeles. Work in AI, p5.js, creative coding, VR/AR, and emerging technologies.';
+
+const {
+  title = defaultTitle,
+  description = defaultDescription,
+  image = '/images/qianqian-ye-profile-2019.jpg',
+} = Astro.props;
+
+// Social previews need absolute URLs
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Qianqian Ye" />
+    <meta
+      name="keywords"
+      content="qianqian ye, Qianqian Ye, creative technologist, AI designer, digital artist, p5.js, creative coding, VR artist, AR developer, Chinese artist, Los Angeles artist, technology artist, open source, creative tool, Processing Foundation, USC professor"
+    />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Qianqian Ye" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageURL} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@4444ian" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+
+    <meta name="google-site-verification" content="sNT5twqfQQoyEocj9XzSA1aJ7iYpX0CcwE7xNDuxiaE" />
+
+    <link rel="stylesheet" href="/css/cssreset-min.css" />
+    <link rel="stylesheet" href="/css/typegrid.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <link rel="icon" href="/images/qianqian-ye-favicon.png" />
+    <link rel="apple-touch-icon" href="/images/qianqian-ye-favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

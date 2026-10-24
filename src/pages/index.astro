@@ -1,42 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Qianqian Ye - Artist, Designer & Creative Technologist</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <!-- Load remaining meta tags -->
-    <script src="js/load-head-meta.js"></script>
-    <!-- Critical CSS files -->
-    <link rel="stylesheet" type="text/css" href="css/cssreset-min.css" />
-    <link rel="stylesheet" type="text/css" href="css/typegrid.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/qianqian-ye-favicon.png" />
-    <link rel="apple-touch-icon" href="images/qianqian-ye-favicon.png" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-
-  <body>
-    <section id="header">
-      <div class="container">
-        <!-- Navigation will be loaded here -->
-      </div>
-    </section>
-
+<BaseLayout>
     <!-- Works
 	================================================== -->
     <section id="works">
@@ -794,33 +760,4 @@
       <!-- // .container -->
     </section>
     <!-- // section#works -->
-
-    <!-- Footer
-	================================================== -->
-    <section id="footer">
-      <div class="container">
-        <div class="desktop-3 columns">
-          <p>
-            Copyright &copy;
-            <a href="http://www.qianqian-ye.com">Qianqian Ye</a>
-          </p>
-        </div>
-        <!-- // .desktop-3 -->
-
-        <div class="clear"></div>
-      </div>
-      <!-- // .container -->
-    </section>
-    <!-- // section#footer -->
-
-    <!-- JS
-	================================================== -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-    <script src="js/jQuery.BlackAndWhite.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/jquery.typeMenu.js"></script>
-    <script src="js/jquery.typeSticky.js"></script>
-    <script src="js/jquery.custom.js"></script>
-    <script src="js/load-nav.js"></script>
-  </body>
-</html>
+</BaseLayout>
