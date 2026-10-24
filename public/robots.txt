@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://qianqian-ye.com/sitemap.xml
+Sitemap: https://qianqian-ye.com/sitemap-index.xml
  
 # Allow all robots complete access
 Disallow: 

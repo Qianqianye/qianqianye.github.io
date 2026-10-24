@@ -11,7 +11,7 @@ hidden: true
 
 Online, words are a form of data and expression. From hashtags to political dissent, words have the power to build new worlds and take down old ones. At the same time, language has also become a form of data, used to create machine learning systems for profit, and it has also become an arena for automated censorship and moderation.
 
-Make your own Hanzi (Chinese character) to bypass automated censorship via [Hanzi Maker](ttps://thefutureofmemory.online/hanzi-maker/).
+Make your own Hanzi (Chinese character) to bypass automated censorship via [Hanzi Maker](https://thefutureofmemory.online/hanzi-maker/).
 
 #### Info
 
