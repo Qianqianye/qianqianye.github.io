@@ -3,7 +3,7 @@ title: "Smart Home"
 cardTitle: "Smart Home App"
 year: "2017"
 category: "IoT"
-thumbnail: "/images/uiux/smart-home/qianqian-ye-smart-home-logo.gif"
+thumbnail: "qianqian-ye-smart-home-logo.gif"
 order: 110
 ---
 

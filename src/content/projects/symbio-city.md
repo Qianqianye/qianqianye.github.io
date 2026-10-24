@@ -2,7 +2,7 @@
 title: "Symbio-City"
 year: "2011"
 category: "Architecture/Urbanism"
-thumbnail: "/images/architecture-urbanism/symbio-city/symbio-city-logo.jpg"
+thumbnail: "symbio-city-logo.jpg"
 order: 510
 hidden: true
 ---

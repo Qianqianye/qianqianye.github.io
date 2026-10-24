@@ -2,7 +2,9 @@
 // Project page template: builds one page per Markdown file in src/content/projects/
 // (except entries with a `link`, which only appear as homepage cards).
 import { getCollection } from 'astro:content';
+import { getImage } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getThumbnail } from '../lib/thumbnails';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', (project) => !project.data.link);
@@ -14,7 +16,9 @@ const { title, year, thumbnail } = project.data;
 const html = project.rendered?.html ?? '';
 
 // Text above <!-- media --> goes in the left sidebar, everything below in the right column
-const [sidebarHtml, mediaHtml = ''] = html.split('<!-- media -->');
+const [sidebarHtml, rawMediaHtml = ''] = html.split('<!-- media -->');
+// Load images only as they scroll into view
+const mediaHtml = rawMediaHtml.replace(/<img /g, '<img loading="lazy" decoding="async" ');
 // Each #### heading in the sidebar starts its own info box (e.g. "Info", "Category")
 const [intro, ...sections] = sidebarHtml.split(/(?=<h4)/);
 
@@ -24,7 +28,10 @@ const description = intro
   .replace(/\s+/g, ' ')
   .trim()
   .slice(0, 160);
-const image = thumbnail ?? mediaHtml.match(/<img[^>]+src="([^"]+)"/)?.[1];
+// Social preview image: the thumbnail as a JPEG, or else the first image on the page
+const image = thumbnail
+  ? (await getImage({ src: getThumbnail(thumbnail), width: 1200, format: 'jpg' })).src
+  : rawMediaHtml.match(/<img[^>]+src="([^"]+)"/)?.[1];
 ---
 
 <BaseLayout title={`${title} - Qianqian Ye`} description={description || undefined} image={image}>

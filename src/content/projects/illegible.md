@@ -2,7 +2,7 @@
 title: "Illegible"
 year: "2020"
 category: "3D"
-thumbnail: "/images/art/censorship/illegible-logo.jpg"
+thumbnail: "illegible-logo.jpg"
 order: 270
 hidden: true
 ---

@@ -2,7 +2,7 @@
 title: "SAM: SUPER Agri Mart"
 year: "2014"
 category: "Architecture/Urbanism"
-thumbnail: "/images/architecture-urbanism/super-agri-mart/Super-Agri-Mart-logo.gif"
+thumbnail: "Super-Agri-Mart-logo.gif"
 order: 440
 hidden: true
 ---

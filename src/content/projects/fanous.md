@@ -2,7 +2,7 @@
 title: "Fanous: Light of Hope for Refugees"
 year: "2016"
 category: "Architecture/Urbanism"
-thumbnail: "/images/architecture-urbanism/fanous/fanous-logo.gif"
+thumbnail: "fanous-logo.gif"
 order: 450
 hidden: true
 ---

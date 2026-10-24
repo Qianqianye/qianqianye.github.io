@@ -21,7 +21,7 @@ Each project is one Markdown file in `src/content/projects/`. The file name beco
 title: "Braiding Rage 怒辫"
 year: "2022"                      # shown under the title on the project page
 category: "3D"                    # shown on the homepage card
-thumbnail: "/images/art/braiding-rage/braiding-rage-logo.jpg"
+thumbnail: "braiding-rage-logo.jpg"  # file name in src/assets/thumbnails/
 order: 170                        # homepage position, lower = earlier
 hidden: true                      # optional: hide from homepage (page still exists)
 cardTitle: "Short Title"          # optional: different title on the homepage card
@@ -46,14 +46,16 @@ Everything below the media line goes in the right column.
 
 - Each `#### Heading` above the media line becomes its own box in the left column.
 - End a line with `\` to force a line break; leave a blank line for a new paragraph.
-- Images go in `public/images/` and are referenced starting with `/images/`.
+- Thumbnails go in `src/assets/thumbnails/`. Astro resizes them and converts them to WebP (GIFs stay animated) at build time, so you can drop in the original file.
+- Project page images go in `public/images/` and are referenced starting with `/images/`.
 
 ## Structure
 
 - `src/content/projects/` — one Markdown file per project
 - `src/pages/[slug].astro` — template for every project page
 - `src/pages/index.astro` — homepage grid, built from the projects
-- `src/pages/about.astro`, `teaching.astro`, `archive.astro` — other pages
+- `src/pages/archive.astro` — every project, including hidden ones
+- `src/pages/about.astro`, `teaching.astro` — other pages
 - `src/layouts/BaseLayout.astro` — `<head>`, meta/social tags, header and footer for every page
 - `src/components/Header.astro` — name, nav, social links (edit once, applies everywhere)
 - `public/` — static files copied as-is (CSS, images, CNAME)

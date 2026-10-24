@@ -2,7 +2,7 @@
 title: "Nakili"
 year: "2021, ongoing"
 category: "Kai-Hai Series"
-thumbnail: "/images/art/nakili/qianqian-ye-nakili-logo.gif"
+thumbnail: "qianqian-ye-nakili-logo.gif"
 order: 160
 ---
 

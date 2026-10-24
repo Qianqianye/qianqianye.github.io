@@ -2,7 +2,7 @@
 title: "Resilient Dock"
 year: "2014"
 category: "Architecture/Urbanism"
-thumbnail: "/images/architecture-urbanism/resilient-dock/dock-logo.jpg"
+thumbnail: "dock-logo.jpg"
 order: 500
 hidden: true
 ---

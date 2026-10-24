@@ -2,7 +2,7 @@
 title: "D-brane"
 year: "2018"
 category: "Interactive Performance"
-thumbnail: "/images/vr-dev/d-brane/qianqian-ye-ar-d-brane-logo.gif"
+thumbnail: "qianqian-ye-ar-d-brane-logo.gif"
 order: 80
 ---
 

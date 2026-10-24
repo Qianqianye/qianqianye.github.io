@@ -2,7 +2,7 @@
 title: "A.A.G"
 year: "2021, ongoing"
 category: "Kai-Hai Series"
-thumbnail: "/images/art/aag/qianqian-ye-aag-logo.png"
+thumbnail: "qianqian-ye-aag-logo.png"
 order: 150
 ---
 

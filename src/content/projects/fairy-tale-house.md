@@ -2,7 +2,7 @@
 title: "HUG"
 year: "2013"
 category: "Interaction / Architecture"
-thumbnail: "/images/uiux/fairy-tale-house/qianqian-ye-fairy-tale-logo.jpg"
+thumbnail: "qianqian-ye-fairy-tale-logo.jpg"
 order: 420
 hidden: true
 ---

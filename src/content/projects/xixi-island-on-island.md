@@ -3,7 +3,7 @@ title: "Island on the Island"
 cardTitle: "XiXi: Island on the Island"
 year: "2010"
 category: "Architecture/Urbanism"
-thumbnail: "/images/architecture-urbanism/xixi-island-on-island/xixi-island-on-island-logo.jpg"
+thumbnail: "xixi-island-on-island-logo.jpg"
 order: 490
 hidden: true
 ---

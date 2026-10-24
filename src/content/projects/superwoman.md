@@ -2,7 +2,7 @@
 title: "Superwoman"
 year: "2017"
 category: "Interaction / Web"
-thumbnail: "/images/uiux/superwoman/qianqian-ye-superwoman-p5js-logo.gif"
+thumbnail: "qianqian-ye-superwoman-p5js-logo.gif"
 order: 320
 hidden: true
 ---

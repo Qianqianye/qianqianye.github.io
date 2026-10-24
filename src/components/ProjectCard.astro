@@ -1,12 +1,16 @@
 ---
 // One thumbnail tile on the homepage grid.
 import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { getThumbnail } from '../lib/thumbnails';
 
 interface Props {
   project: CollectionEntry<'projects'>;
+  // Load immediately instead of when scrolled into view (for the first row)
+  eager?: boolean;
 }
 
-const { project } = Astro.props;
+const { project, eager = false } = Astro.props;
 const { title, cardTitle, category, thumbnail, link } = project.data;
 const href = link ?? `/${project.id}.html`;
 ---
@@ -16,7 +20,25 @@ const href = link ?? `/${project.id}.html`;
     <div class="item first-row">
       <h3>{cardTitle ?? title}</h3>
       {category && <span class="category">{category}</span>}
-      {thumbnail && <img src={thumbnail} alt="" />}
+      {
+        thumbnail && (
+          <Image
+            src={getThumbnail(thumbnail)}
+            alt=""
+            widths={[400, 800]}
+            quality={60}
+            sizes="(max-width: 767px) 100vw, (min-width: 1300px) 360px, 280px"
+            loading={eager ? 'eager' : 'lazy'}
+            fetchpriority={eager ? 'high' : 'auto'}
+          />
+        )
+      }
     </div>
   </div>
 </a>
+
+<style>
+  img {
+    height: auto;
+  }
+</style>

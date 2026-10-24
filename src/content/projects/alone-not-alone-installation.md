@@ -3,7 +3,7 @@ title: "Alone Not Alone Installation"
 cardTitle: "Alone Not Alone"
 year: "2017"
 category: "Art"
-thumbnail: "/images/research/alone-not-alone-installation/qianqian-ye-alone-not-alone-installation-logo.gif"
+thumbnail: "qianqian-ye-alone-not-alone-installation-logo.gif"
 order: 350
 hidden: true
 ---

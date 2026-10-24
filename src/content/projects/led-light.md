@@ -2,7 +2,7 @@
 title: "LED Light & App"
 year: "2017"
 category: "IoT"
-thumbnail: "/images/uiux/led-light/qianqian-ye-led-light-logo.gif"
+thumbnail: "qianqian-ye-led-light-logo.gif"
 order: 330
 ---
 

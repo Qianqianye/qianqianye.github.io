@@ -2,7 +2,7 @@
 title: "P5.js Shan Shui"
 year: "2018"
 category: "Interaction / Web"
-thumbnail: "/images/art/p5-js-chinese/p5js-chinese-homepage-logo.gif"
+thumbnail: "p5js-chinese-homepage-logo.gif"
 order: 310
 hidden: true
 ---

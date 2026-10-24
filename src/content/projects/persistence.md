@@ -2,7 +2,7 @@
 title: "Persistence"
 year: "2020"
 category: "Interactive Installation"
-thumbnail: "/images/spectra/persistence/persistence-logo.gif"
+thumbnail: "persistence-logo.gif"
 order: 70
 ---
 

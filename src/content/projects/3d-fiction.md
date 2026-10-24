@@ -3,7 +3,7 @@ title: "3D Fiction"
 cardTitle: "3D fiction"
 year: "2020"
 category: "3D"
-thumbnail: "/images/art/3d-fiction/qianqian-ye-3d-fiction-logo.jpg"
+thumbnail: "qianqian-ye-3d-fiction-logo.jpg"
 order: 250
 ---
 

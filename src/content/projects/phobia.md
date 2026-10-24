@@ -2,7 +2,7 @@
 title: "PhobiaVR"
 year: "2017"
 category: "Virtual Reality"
-thumbnail: "/images/uiux/phobia-vr/phobiavr-logo.jpg"
+thumbnail: "phobiavr-logo.jpg"
 order: 90
 ---
 

@@ -2,7 +2,7 @@
 title: "女: Radical 38"
 year: "2019"
 category: "Art"
-thumbnail: "/images/art/radical-38/qianqian-ye-women-rage-1.jpg"
+thumbnail: "qianqian-ye-women-rage-1.jpg"
 order: 460
 ---
 

@@ -2,7 +2,7 @@
 title: "A Todo Pedal"
 year: "2016"
 category: "Urbanism/Graphic Design"
-thumbnail: "/images/architecture-urbanism/bike-manual/qianqian-ye-gehl-bike-manual-logo.jpg"
+thumbnail: "qianqian-ye-gehl-bike-manual-logo.jpg"
 order: 430
 hidden: true
 ---

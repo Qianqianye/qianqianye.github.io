@@ -2,7 +2,7 @@
 title: "Frames: Whither the Contemporary Art Museum?"
 year: "2014"
 category: "Research & Exhibition: Future of Art Museum"
-thumbnail: "/images/research/to-be-destroyed/frames-qianqian-ye-logo.gif"
+thumbnail: "frames-qianqian-ye-logo.gif"
 order: 520
 hidden: true
 ---

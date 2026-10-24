@@ -3,7 +3,7 @@ title: "3D*Q"
 cardTitle: "3D * Q"
 year: "2017"
 category: "3D"
-thumbnail: "/images/qianqian-ye-3dscan.gif"
+thumbnail: "qianqian-ye-3dscan.gif"
 order: 300
 ---
 
