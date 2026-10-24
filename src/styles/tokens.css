@@ -14,7 +14,8 @@
 
   /* Color */
   --fg: #111;
-  --muted: #8a8a8a;
+  --soft: #6f6f6f; /* nav and icons at rest */
+  --muted: #8a8a8a; /* secondary text: categories, years, labels */
   --bg: #fff;
 }
 

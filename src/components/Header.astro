@@ -53,17 +53,22 @@ const current = path.startsWith('/about')
     padding-block: var(--margin);
     row-gap: 4px;
   }
-  /* Hover and current page both show an underline */
-  .name:hover,
+  /* Nav links and icons are soft grey and turn black on hover; the name stays black.
+     The current page is black and underlined. */
+  .nav a,
+  .social a {
+    color: var(--soft);
+    transition: color 0.15s;
+  }
   .nav a:hover,
+  .social a:hover,
+  .nav a[aria-current='page'] {
+    color: var(--fg);
+  }
   .nav a[aria-current='page'] {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-  }
-  /* While pointing at another nav link, the underline moves there instead of showing two */
-  .nav:has(a:hover) a[aria-current='page']:not(:hover) {
-    text-decoration: none;
   }
 
   /* Phone: name left and icons right on the first line, nav stacked under the name */
@@ -96,14 +101,8 @@ const current = path.startsWith('/about')
     height: 14px;
     fill: currentColor;
   }
-  /* A short line appears under the hovered icon */
   .social a {
     display: block;
-    padding-bottom: 3px;
-    border-bottom: 1px solid transparent;
-  }
-  .social a:hover {
-    border-bottom-color: currentColor;
   }
 
   /* Tablet and up: one line, aligned to the thumbnail columns below */

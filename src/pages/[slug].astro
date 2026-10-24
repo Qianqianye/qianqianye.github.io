@@ -41,9 +41,9 @@ const image = thumbnail
     <div class="text">
       <h1>{title}</h1>
       {year && <p class="year">{year}</p>}
-      <div class="body" set:html={textHtml} />
+      <div class="body text-links" set:html={textHtml} />
     </div>
-    <div class="media" set:html={mediaHtml} />
+    <div class="media text-links" set:html={mediaHtml} />
   </main>
 </BaseLayout>
 
@@ -97,17 +97,6 @@ const image = thumbnail
     font-weight: normal;
     color: var(--muted);
   }
-  .body :global(a),
-  .media :global(a) {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.15em;
-  }
-  .body :global(a:hover),
-  .media :global(a:hover) {
-    text-decoration-thickness: 2px;
-  }
-
   /* Images and videos: full column width, one gap apart */
   .media {
     display: flex;

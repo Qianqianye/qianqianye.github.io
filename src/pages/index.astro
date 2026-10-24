@@ -12,7 +12,7 @@ const projects = (await getCollection('projects', (project) => !project.data.hid
 
 <BaseLayout>
   <main>
-    <section class="bio grid">
+    <section class="bio grid text-links">
       <div class="bio-text"><Bio /></div>
     </section>
     <ProjectGrid projects={projects} />
@@ -35,13 +35,5 @@ const projects = (await getCollection('projects', (project) => !project.data.hid
     .bio-text {
       grid-column: 1 / span 8;
     }
-  }
-  .bio :global(a) {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.15em;
-  }
-  .bio :global(a:hover) {
-    text-decoration-thickness: 2px;
   }
 </style>

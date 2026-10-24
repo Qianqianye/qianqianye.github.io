@@ -26,6 +26,19 @@ p {
   margin: 0;
 }
 
+/* Links inside text (add class="text-links" to the container):
+   thin dotted underline at rest, solid on hover */
+.text-links a {
+  text-decoration: underline dotted;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--muted);
+  text-underline-offset: 0.2em;
+}
+.text-links a:hover {
+  text-decoration-style: solid;
+  text-decoration-color: currentColor;
+}
+
 img {
   display: block;
   max-width: 100%;
