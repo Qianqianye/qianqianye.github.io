@@ -28,7 +28,7 @@ Visual Design
 
 #### Overview
 
-<video class="test-test" src="/images/uiux/smart-home/qianqian-ye-smart-home-prototype.mp4" type="video/mp4" autoplay="" loop=""></video>
+<video class="wide" src="/images/uiux/smart-home/qianqian-ye-smart-home-prototype.mp4" type="video/mp4" autoplay="" loop=""></video>
 
 ![](/images/uiux/smart-home/qianqian-ye-smart-home-overview.jpg)
 

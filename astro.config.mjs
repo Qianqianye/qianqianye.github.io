@@ -8,6 +8,8 @@ export default defineConfig({
   trailingSlash: 'never',
   // Keep whitespace as written: minifying drops spaces between words and inline links
   compressHTML: false,
+  // Hide Astro's floating toolbar in the local dev server
+  devToolbar: { enabled: false },
   // Generates sitemap-index.xml on every build, with the same .html URLs the pages use
   integrations: [
     sitemap({

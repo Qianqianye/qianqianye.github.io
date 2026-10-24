@@ -24,8 +24,8 @@ Virtual Reality
 
 <!-- media -->
 
-<iframe class="test-test" src="https://player.vimeo.com/video/199430724" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<iframe class="wide" src="https://player.vimeo.com/video/199430724" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
-<iframe class="test-test" src="https://player.vimeo.com/video/199500968" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<iframe class="wide" src="https://player.vimeo.com/video/199500968" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
-<iframe class="test-test" src="https://player.vimeo.com/video/207257400" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<iframe class="wide" src="https://player.vimeo.com/video/207257400" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>

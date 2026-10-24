@@ -1,5 +1,8 @@
 ---
 // Shared page shell: <head> with per-page meta tags, header, and footer.
+import '@fontsource-variable/geist';
+import '../styles/tokens.css';
+import '../styles/base.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
@@ -54,19 +57,8 @@ const imageURL = new URL(image, Astro.site);
 
     <meta name="google-site-verification" content="sNT5twqfQQoyEocj9XzSA1aJ7iYpX0CcwE7xNDuxiaE" />
 
-    <link rel="stylesheet" href="/css/cssreset-min.css" />
-    <link rel="stylesheet" href="/css/typegrid.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-
     <link rel="icon" href="/images/qianqian-ye-favicon.png" />
     <link rel="apple-touch-icon" href="/images/qianqian-ye-favicon.png" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
 
   <body>

@@ -36,7 +36,7 @@ Branding
 
 Early motion prototype, made by Principle.
 
-<video class="test-test" src="/images/uiux/phobia-vr/phobia-vr-motion-prototype.mp4" type="video/mp4" autoplay="" loop=""></video>
+<video class="wide" src="/images/uiux/phobia-vr/phobia-vr-motion-prototype.mp4" type="video/mp4" autoplay="" loop=""></video>
 
 Main behavior model: 'calibrate - challenge - feedback' loop.
 

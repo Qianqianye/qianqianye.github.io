@@ -21,7 +21,7 @@ Software : Harvey Moon
 
 <!-- media -->
 
-<iframe class="test-test" src="https://www.youtube.com/embed/LNJsX4eM-M4?si=j3oJ2HudBS95pUaW" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<iframe class="wide" src="https://www.youtube.com/embed/LNJsX4eM-M4?si=j3oJ2HudBS95pUaW" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
 ![](/images/spectra/persistence/persistence-1.jpg)
 

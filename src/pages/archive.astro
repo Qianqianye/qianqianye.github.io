@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
 
 // Archive: every project, including ones hidden from the homepage
 const projects = (await getCollection('projects', (project) => project.data.thumbnail)).sort(
@@ -10,9 +10,13 @@ const projects = (await getCollection('projects', (project) => project.data.thum
 ---
 
 <BaseLayout title="Archive - Qianqian Ye">
-  <section id="works">
-    <div class="container">
-      {projects.map((project) => <ProjectCard project={project} />)}
-    </div>
-  </section>
+  <main class="archive">
+    <ProjectGrid projects={projects} />
+  </main>
 </BaseLayout>
+
+<style>
+  .archive {
+    padding-top: var(--gap);
+  }
+</style>

@@ -32,13 +32,13 @@ Featuring at [p5js.org](https://p5js.org/) homepage (May 3 - May 17, 2017).
 
 \
 
-<video class="wide-test" src="/images/uiux/superwoman/qianqian-ye-superwoman-p5js-homepage.mp4" type="video/mp4" autoplay="" loop=""></video>
+<video class="wide" src="/images/uiux/superwoman/qianqian-ye-superwoman-p5js-homepage.mp4" type="video/mp4" autoplay="" loop=""></video>
 
 Interview
 
 \
 
-<iframe class="test-test" src="https://www.youtube.com/embed/AoxZMv0DwyQ" frameborder="0" allowfullscreen=""></iframe>
+<iframe class="wide" src="https://www.youtube.com/embed/AoxZMv0DwyQ" frameborder="0" allowfullscreen=""></iframe>
 
 #### Process
 

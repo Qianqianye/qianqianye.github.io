@@ -3,37 +3,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Teaching - Qianqian Ye">
-    <section id="works" class="page single">
-        <div class="container">
-
-            <div class="desktop-4 tablet-12 nested columns">
-
-<!--                <div class="sidebar sticky">-->
-                    <div class="sidebar">
-
-                    <div class="desktop-4 tablet-12 columns">
-
-                        <div class="box-info">
-                            <h3 class="border-top">Teaching </h3>
-
-                            <p>
-                               Coming Soon :)
-
-                            </p>
-                        </div><!-- // .box-info -->
-
-                    </div>
-
-                    <div class="desktop-4 tablet-12 columns">
-
-                    </div><!-- // .desktop-4 -->
-                    <div class="clear"></div>
-
-                </div>
-
-            </div>
-
-            </div><!-- // .container -->
-    </section><!-- // section -->
-
+  <main class="teaching grid">
+    <div class="text">
+      <h1>Teaching</h1>
+      <p>Coming Soon :)</p>
+    </div>
+  </main>
 </BaseLayout>
+
+<style>
+  .teaching {
+    padding-top: var(--gap);
+    min-height: 50vh;
+  }
+  .text {
+    grid-column: 1 / -1;
+  }
+  @media (min-width: 768px) {
+    .text {
+      grid-column: 1 / span 4;
+    }
+  }
+  h1 {
+    margin: 0 0 0.75em;
+    font-size: inherit;
+    font-weight: 500;
+  }
+</style>

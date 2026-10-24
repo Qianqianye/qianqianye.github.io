@@ -29,11 +29,11 @@ Alternative Narrative
 
 <!-- media -->
 
-<iframe class="test-test" src="https://www.youtube.com/embed/FvLupGWPz9c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe class="wide" src="https://www.youtube.com/embed/FvLupGWPz9c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 <iframe class="square" title="vimeo-player" src="https://player.vimeo.com/video/560261230" frameborder="0" allowfullscreen=""></iframe>
 
-<iframe class="test-test" title="vimeo-player" src="https://player.vimeo.com/video/660798981" frameborder="0" allowfullscreen=""></iframe>
+<iframe class="wide" title="vimeo-player" src="https://player.vimeo.com/video/660798981" frameborder="0" allowfullscreen=""></iframe>
 
 Photos of 'Self-Comb Women' (自梳女 , ZìShūNǚ)
 

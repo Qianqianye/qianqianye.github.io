@@ -30,8 +30,8 @@ Future of Things
 
 #### Prototype 1
 
-<iframe class="test-test" src="https://player.vimeo.com/video/268531914?autoplay=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<iframe class="wide" src="https://player.vimeo.com/video/268531914?autoplay=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
 #### Prototype 0
 
-<iframe class="test-test" src="https://player.vimeo.com/video/268532086" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<iframe class="wide" src="https://player.vimeo.com/video/268532086" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
