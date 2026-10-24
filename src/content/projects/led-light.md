@@ -35,7 +35,7 @@ IoT
 
 Color Mode In Action - 'Election Night' Mode
 
-<video class="wide-test" src="/images/uiux/led-light/qianqian-ye-election-color-led.mp4" type="video/mp4" autoplay="" loop=""></video>
+<video class="wide" src="/images/uiux/led-light/qianqian-ye-election-color-led.mp4" type="video/mp4" autoplay="" loop=""></video>
 
 #### Information Architecture
 
@@ -61,7 +61,7 @@ Color Mode In Action - 'Election Night' Mode
 
 #### Neopixel Lightbox
 
-<video class="wide-test" src="/images/uiux/led-light/qianqian-ye-led-light-box.mp4" type="video/mp4" autoplay="" loop=""></video>
+<video class="wide" src="/images/uiux/led-light/qianqian-ye-led-light-box.mp4" type="video/mp4" autoplay="" loop=""></video>
 
 Inside The Lightbox
 

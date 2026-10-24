@@ -41,21 +41,25 @@ Everything below the media line goes in the right column.
 
 ![](/images/art/braiding-rage/braiding-rage-dtla.jpg)
 
-<iframe class="test-test" src="https://player.vimeo.com/video/123" frameborder="0" allowfullscreen></iframe>
+<iframe class="wide" src="https://player.vimeo.com/video/123" frameborder="0" allowfullscreen></iframe>
 ```
 
 - Each `#### Heading` above the media line becomes its own box in the left column.
 - End a line with `\` to force a line break; leave a blank line for a new paragraph.
 - Thumbnails go in `src/assets/thumbnails/`. Astro resizes them and converts them to WebP (GIFs stay animated) at build time, so you can drop in the original file.
 - Project page images go in `public/images/` and are referenced starting with `/images/`.
+- Embedded videos (`<iframe>`) take `class="wide"` (16:9), `"square"` (1:1) or `"vertical"` (portrait) to keep their proportions.
 
 ## Structure
 
 - `src/content/projects/` — one Markdown file per project
+- `src/content/bio.md` — the short bio on the homepage
+- `src/styles/tokens.css` — grid, font, sizes and colors used by every page
+- `src/styles/base.css` — base element styles (body, links, images)
 - `src/pages/[slug].astro` — template for every project page
-- `src/pages/index.astro` — homepage grid, built from the projects
+- `src/pages/index.astro` — homepage: bio + project grid
 - `src/pages/archive.astro` — every project, including hidden ones
 - `src/pages/about.astro`, `teaching.astro` — other pages
 - `src/layouts/BaseLayout.astro` — `<head>`, meta/social tags, header and footer for every page
 - `src/components/Header.astro` — name, nav, social links (edit once, applies everywhere)
-- `public/` — static files copied as-is (CSS, images, CNAME)
+- `public/` — static files copied as-is (images, CNAME, robots.txt)

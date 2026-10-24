@@ -35,7 +35,7 @@ Future of Things
 
 <!-- media -->
 
-<iframe class="test-test" src="https://player.vimeo.com/video/262942823?autoplay=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<iframe class="wide" src="https://player.vimeo.com/video/262942823?autoplay=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
 ![](/images/vr-dev/d-brane/qianqian-ye-ar-d-brane-1.gif)
 

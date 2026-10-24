@@ -1,0 +1,22 @@
+---
+// Grid of project thumbnails, used on the homepage and the archive.
+import type { CollectionEntry } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+
+interface Props {
+  projects: CollectionEntry<'projects'>[];
+}
+
+const { projects } = Astro.props;
+---
+
+<section class="works grid">
+  {projects.map((project, i) => <ProjectCard project={project} eager={i < 3} />)}
+</section>
+
+<style>
+  /* Rows are 2× the grid gap apart */
+  .works {
+    row-gap: calc(var(--gap) * 2);
+  }
+</style>

@@ -1,7 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import { Content as Bio } from '../content/bio.md';
 
 // Homepage grid: every project without `hidden: true`, sorted by `order`
 const projects = (await getCollection('projects', (project) => !project.data.hidden)).sort(
@@ -10,9 +11,37 @@ const projects = (await getCollection('projects', (project) => !project.data.hid
 ---
 
 <BaseLayout>
-  <section id="works">
-    <div class="container">
-      {projects.map((project, i) => <ProjectCard project={project} eager={i < 3} />)}
-    </div>
-  </section>
+  <main>
+    <section class="bio grid">
+      <div class="bio-text"><Bio /></div>
+    </section>
+    <ProjectGrid projects={projects} />
+  </main>
 </BaseLayout>
+
+<style>
+  /* Short bio (edit it in src/content/bio.md). Space above = 1 gap, below = 2 gaps. */
+  .bio {
+    padding-block: var(--gap) calc(var(--gap) * 2);
+    font-size: var(--text-medium);
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+  }
+  .bio-text {
+    grid-column: 1 / -1;
+  }
+  @media (min-width: 768px) {
+    /* 8 columns: ends at the right edge of the second thumbnail */
+    .bio-text {
+      grid-column: 1 / span 8;
+    }
+  }
+  .bio :global(a) {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+  }
+  .bio :global(a:hover) {
+    text-decoration-thickness: 2px;
+  }
+</style>

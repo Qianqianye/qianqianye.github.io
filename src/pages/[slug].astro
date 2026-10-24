@@ -15,14 +15,12 @@ const { project } = Astro.props;
 const { title, year, thumbnail } = project.data;
 const html = project.rendered?.html ?? '';
 
-// Text above <!-- media --> goes in the left sidebar, everything below in the right column
-const [sidebarHtml, rawMediaHtml = ''] = html.split('<!-- media -->');
+// Text above <!-- media --> goes in the left column, everything below in the right column
+const [textHtml, rawMediaHtml = ''] = html.split('<!-- media -->');
 // Load images only as they scroll into view
 const mediaHtml = rawMediaHtml.replace(/<img /g, '<img loading="lazy" decoding="async" ');
-// Each #### heading in the sidebar starts its own info box (e.g. "Info", "Category")
-const [intro, ...sections] = sidebarHtml.split(/(?=<h4)/);
 
-const description = intro
+const description = textHtml
   .match(/<p>([\s\S]*?)<\/p>/)?.[1]
   .replace(/<[^>]+>/g, '')
   .replace(/\s+/g, ' ')
@@ -34,48 +32,117 @@ const image = thumbnail
   : rawMediaHtml.match(/<img[^>]+src="([^"]+)"/)?.[1];
 ---
 
-<BaseLayout title={`${title} - Qianqian Ye`} description={description || undefined} image={image}>
-  <section id="works" class="page single">
-    <div class="container">
-      <div class="desktop-4 tablet-12 nested columns">
-        <div class="sidebar">
-          <div class="desktop-4 tablet-12 columns">
-            <div class="box-info">
-              <h3 class="border-top">{title}</h3>
-              {year && <p class="project-desc">{year}</p>}
-              <Fragment set:html={intro} />
-            </div>
-          </div>
-          {
-            sections.map((section) => (
-              <div class="desktop-4 tablet-12 columns">
-                <div class="box-info" set:html={section.replace('<h4', '<h4 class="border-top"')} />
-              </div>
-            ))
-          }
-          <div class="clear"></div>
-        </div>
-      </div>
-
-      <div class="desktop-8 tablet-12 columns">
-        <div class="box-content">
-          <Fragment set:html={mediaHtml} />
-          <div class="clear"></div>
-        </div>
-      </div>
+<BaseLayout
+  title={`${title} - Qianqian Ye`}
+  description={description || undefined}
+  image={image}
+>
+  <main class="project grid">
+    <div class="text">
+      <h1>{title}</h1>
+      {year && <p class="year">{year}</p>}
+      <div class="body" set:html={textHtml} />
     </div>
-  </section>
+    <div class="media" set:html={mediaHtml} />
+  </main>
 </BaseLayout>
 
-<style is:global>
-  /* Links in project text (previously wrapped in span.font-color-primary) */
-  #works.single .box-info a,
-  #works.single .box-content a {
-    color: #000;
-    border-bottom: 1px dotted lightgray;
+<style>
+  .project {
+    padding-top: var(--gap);
+    row-gap: calc(var(--gap) * 2);
   }
-  #works.single .box-info a:hover,
-  #works.single .box-content a:hover {
-    border-bottom: 1px solid black;
+
+  /* Phone: text, then media. Desktop: text in the first 4 columns, media in the other 8 */
+  .text,
+  .media {
+    grid-column: 1 / -1;
+  }
+  @media (min-width: 1100px) {
+    .text {
+      grid-column: 1 / span 4;
+      align-self: start;
+      /* Text stays in view while scrolling through the images, if it fits on screen */
+      position: sticky;
+      top: var(--gap);
+    }
+    .media {
+      grid-column: 5 / -1;
+    }
+  }
+  /* Tablet: text in 8 columns so lines don't get too long, media full width */
+  @media (min-width: 768px) and (max-width: 1099px) {
+    .text {
+      grid-column: 1 / span 8;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 500;
+  }
+  .year {
+    color: var(--muted);
+    margin-bottom: 1.5em;
+  }
+
+  /* Project text from Markdown */
+  .body :global(p + p) {
+    margin-top: 1em;
+  }
+  .body :global(h4) {
+    margin: 2em 0 0.25em;
+    font-size: inherit;
+    font-weight: normal;
+    color: var(--muted);
+  }
+  .body :global(a),
+  .media :global(a) {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+  }
+  .body :global(a:hover),
+  .media :global(a:hover) {
+    text-decoration-thickness: 2px;
+  }
+
+  /* Images and videos: full column width, one gap apart */
+  .media {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+  }
+  .media :global(p:has(> img)) {
+    display: contents;
+  }
+  .media :global(img),
+  .media :global(video),
+  .media :global(iframe) {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 0;
+  }
+  /* Embedded videos keep their proportions: add class="wide", "square" or "vertical" */
+  .media :global(iframe) {
+    aspect-ratio: 4 / 3;
+  }
+  .media :global(iframe.wide) {
+    aspect-ratio: 16 / 9;
+  }
+  .media :global(iframe.square) {
+    aspect-ratio: 1;
+  }
+  .media :global(iframe.vertical) {
+    aspect-ratio: 640 / 1387;
+    width: min(100%, 480px);
+  }
+  /* Captions and headings between images */
+  .media :global(h4) {
+    margin: var(--gap) 0 0;
+    font-size: inherit;
+    font-weight: 500;
   }
 </style>

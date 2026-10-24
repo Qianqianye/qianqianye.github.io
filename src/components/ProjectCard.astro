@@ -1,5 +1,5 @@
 ---
-// One thumbnail tile on the homepage grid.
+// One square thumbnail with its title and category underneath.
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 import { getThumbnail } from '../lib/thumbnails';
@@ -15,30 +15,57 @@ const { title, cardTitle, category, thumbnail, link } = project.data;
 const href = link ?? `/${project.id}.html`;
 ---
 
-<a href={href} class="permalink">
-  <div class="desktop-4 mobile-full columns">
-    <div class="item first-row">
-      <h3>{cardTitle ?? title}</h3>
-      {category && <span class="category">{category}</span>}
-      {
-        thumbnail && (
-          <Image
-            src={getThumbnail(thumbnail)}
-            alt=""
-            widths={[400, 800]}
-            quality={60}
-            sizes="(max-width: 767px) 100vw, (min-width: 1300px) 360px, 280px"
-            loading={eager ? 'eager' : 'lazy'}
-            fetchpriority={eager ? 'high' : 'auto'}
-          />
-        )
-      }
-    </div>
-  </div>
+<a class="card" href={href}>
+  {
+    thumbnail && (
+      <Image
+        src={getThumbnail(thumbnail)}
+        alt=""
+        widths={[400, 800]}
+        quality={60}
+        sizes="(max-width: 767px) 100vw, (max-width: 1099px) 50vw, 33vw"
+        loading={eager ? 'eager' : 'lazy'}
+        fetchpriority={eager ? 'high' : 'auto'}
+      />
+    )
+  }
+  <span class="title">{cardTitle ?? title}</span>
+  {category && <span class="category">{category}</span>}
 </a>
 
 <style>
+  /* Phone: full width; tablet: 2 per row; desktop: 3 per row */
+  .card {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 768px) {
+    .card {
+      grid-column: span 6;
+    }
+  }
+  @media (min-width: 1100px) {
+    .card {
+      grid-column: span 4;
+    }
+  }
   img {
-    height: auto;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-weight: 500;
+  }
+  .category {
+    color: var(--muted);
+    font-size: 0.9em;
+  }
+  .card:hover .title {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
   }
 </style>

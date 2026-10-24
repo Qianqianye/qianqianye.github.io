@@ -22,7 +22,7 @@ We are grateful to the [Civic Media Fellowship](https://www.annenberglab.com/civ
 
 <!-- media -->
 
-<iframe class="test-test" src="https://player.vimeo.com/video/1047645068" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+<iframe class="wide" src="https://player.vimeo.com/video/1047645068" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
 
 Spell samples
 
