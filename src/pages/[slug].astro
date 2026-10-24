@@ -1,0 +1,74 @@
+---
+// Project page template: builds one page per Markdown file in src/content/projects/
+// (except entries with a `link`, which only appear as homepage cards).
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects', (project) => !project.data.link);
+  return projects.map((project) => ({ params: { slug: project.id }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const { title, year, thumbnail } = project.data;
+const html = project.rendered?.html ?? '';
+
+// Text above <!-- media --> goes in the left sidebar, everything below in the right column
+const [sidebarHtml, mediaHtml = ''] = html.split('<!-- media -->');
+// Each #### heading in the sidebar starts its own info box (e.g. "Info", "Category")
+const [intro, ...sections] = sidebarHtml.split(/(?=<h4)/);
+
+const description = intro
+  .match(/<p>([\s\S]*?)<\/p>/)?.[1]
+  .replace(/<[^>]+>/g, '')
+  .replace(/\s+/g, ' ')
+  .trim()
+  .slice(0, 160);
+const image = thumbnail ?? mediaHtml.match(/<img[^>]+src="([^"]+)"/)?.[1];
+---
+
+<BaseLayout title={`${title} - Qianqian Ye`} description={description || undefined} image={image}>
+  <section id="works" class="page single">
+    <div class="container">
+      <div class="desktop-4 tablet-12 nested columns">
+        <div class="sidebar">
+          <div class="desktop-4 tablet-12 columns">
+            <div class="box-info">
+              <h3 class="border-top">{title}</h3>
+              {year && <p class="project-desc">{year}</p>}
+              <Fragment set:html={intro} />
+            </div>
+          </div>
+          {
+            sections.map((section) => (
+              <div class="desktop-4 tablet-12 columns">
+                <div class="box-info" set:html={section.replace('<h4', '<h4 class="border-top"')} />
+              </div>
+            ))
+          }
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <div class="desktop-8 tablet-12 columns">
+        <div class="box-content">
+          <Fragment set:html={mediaHtml} />
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  /* Links in project text (previously wrapped in span.font-color-primary) */
+  #works.single .box-info a,
+  #works.single .box-content a {
+    color: #000;
+    border-bottom: 1px dotted lightgray;
+  }
+  #works.single .box-info a:hover,
+  #works.single .box-content a:hover {
+    border-bottom: 1px solid black;
+  }
+</style>

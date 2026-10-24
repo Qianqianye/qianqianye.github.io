@@ -1,0 +1,22 @@
+---
+// One thumbnail tile on the homepage grid.
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { title, cardTitle, category, thumbnail, link } = project.data;
+const href = link ?? `/${project.id}.html`;
+---
+
+<a href={href} class="permalink">
+  <div class="desktop-4 mobile-full columns">
+    <div class="item first-row">
+      <h3>{cardTitle ?? title}</h3>
+      {category && <span class="category">{category}</span>}
+      {thumbnail && <img src={thumbnail} alt="" />}
+    </div>
+  </div>
+</a>
