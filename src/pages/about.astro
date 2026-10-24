@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="About - Qianqian Ye">
-  <main class="about grid">
+  <main class="about grid text-links">
     <figure class="portrait">
       <img src="/images/qianqian-ye-profile.jpg" alt="Qianqian, a non-binary Chinese person with black short hair, wearing a black tank top, standing next to an apple tree, with a lush garden in the background." />
       <figcaption><b>Image Description:</b> Qianqian, a non-binary Chinese person with black short hair, wearing a black tank top, standing next to an apple tree, with a lush garden in the background.</figcaption>
@@ -48,7 +48,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <div class="year">
         <h3>2020</h3>
-        <p><a href="https://foundation.mozilla.org/en/blog/toolkit-outsmarting-ai-powered-censorship/">Creative Media Award</a>, Mozilla Foundation (With Xiaowei Wang)</p>
+        <p><a href="https://foundation.mozilla.org/en/blog/toolkit-outsmarting-ai-powered-censorship/">Creative Media Award</a>, Mozilla Foundation (Collaboration with Xiaowei Wang)</p>
         <p><a href="https://www.b4bel4b.com/halfofthesky">Individual Artist Grant</a>, City of Oakland Cultural Funding Grant (With Tiare Ribeaux + Xiaowei Wang)</p>
       </div>
       <div class="year">
@@ -224,14 +224,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .list p + p {
     margin-top: 0.4em;
-  }
-
-  a {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.15em;
-  }
-  a:hover {
-    text-decoration-thickness: 2px;
   }
 </style>
