@@ -2,7 +2,7 @@
 title: "Entangled"
 year: "2021"
 category: "Augmented reality"
-thumbnail: "qianqian-ye-entangled-logo.gif"
+thumbnail: "qianqian-ye-entangled-logo.jpg"
 order: 200
 ---
 
