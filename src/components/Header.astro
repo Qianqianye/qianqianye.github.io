@@ -107,18 +107,27 @@ const current = path.startsWith('/about')
     display: block;
   }
 
-  /* Tablet and up: one line, aligned to the thumbnail columns below */
+  /* Tablet and up: one line. Tablet gives the nav 6 columns so it doesn't wrap. */
   @media (min-width: 768px) {
     .name {
       grid-column: 1 / span 4;
     }
     .nav {
-      grid-column: 5 / span 4;
+      grid-column: 5 / span 6;
       grid-row: 1;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 1.2em;
       margin-top: 0;
+    }
+    .social {
+      grid-column: 11 / -1;
+    }
+  }
+  /* Desktop: nav and icons line up with the 2nd and 3rd thumbnail columns */
+  @media (min-width: 1100px) {
+    .nav {
+      grid-column: 5 / span 4;
     }
     .social {
       grid-column: 9 / -1;
