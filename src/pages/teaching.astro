@@ -1,32 +1,204 @@
 ---
+import { getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getThumbnail } from '../lib/thumbnails';
+
+// Student exhibitions reuse the project entries (title, thumbnail, link)
+const exhibitions = [
+  { id: 'collective-digital-care-exhibition', term: 'IML300, Spring 2021' },
+  { id: 'softerr-exhibition', term: 'IML300, Fall 2021' },
+  { id: 'html-garden-exhibition', term: 'IML300, Spring 2022' },
+];
+const exhibitionEntries = await Promise.all(
+  exhibitions.map(async ({ id, term }) => ({ project: (await getEntry('projects', id))!, term })),
+);
+const qtv = (await getEntry('projects', 'qtv'))!;
 ---
 
 <BaseLayout title="Teaching - Qianqian Ye">
-  <main class="teaching grid">
-    <div class="text">
-      <h1>Teaching</h1>
-      <p>Coming Soon :)</p>
-    </div>
+  <main class="teaching">
+    <!-- Page title for screen readers and search engines; the nav already shows it -->
+    <h1 class="visually-hidden">Teaching</h1>
+
+    <section class="grid block note-block">
+      <div class="text-col">
+        <p class="note">Under construction, more coming soon :)</p>
+      </div>
+    </section>
+
+    <!-- Each section: text on the left, tiles on the right -->
+    <section id="usc" class="grid block">
+      <div class="text-col">
+        <h2>Teaching at USC</h2>
+        <div class="text-links">
+          <p>
+            I've been teaching creative coding at USC since 2020, where I'm an Adjunct Associate
+            Professor in the <a href="https://cinema.usc.edu/mediaarts/">Media Arts + Practice</a>
+            division of the School of Cinematic Arts. My classes range from a first introduction to
+            programming for the web to advanced creative coding:
+          </p>
+          <div class="courses">
+            <div class="course">
+              <p>IML300: Introduction to Creative Web Programming</p>
+              <p class="meta">Every semester since Fall 2020</p>
+            </div>
+            <div class="course">
+              <p>IML400: Advanced Creative Coding for the Web</p>
+              <p class="meta">Spring 2021, Fall 2021</p>
+            </div>
+          </div>
+          <p>
+            In 2021 and 2022, my students and I turned their final projects into virtual exhibitions
+            on New Art City.
+          </p>
+        </div>
+      </div>
+      <div class="tiles">
+        {
+          exhibitionEntries.map(({ project, term }) => (
+            <a class="card" href={project.data.link}>
+              <Image
+                src={getThumbnail(project.data.thumbnail!)}
+                alt=""
+                widths={[400, 800]}
+                quality={60}
+                sizes="(max-width: 767px) 50vw, (max-width: 1099px) 25vw, 16vw"
+              />
+              <span class="title">{project.data.title}</span>
+              <span class="meta">{term}</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="qtv" class="grid block">
+      <div class="text-col text-links">
+        <h2>Qtv: p5.js Tutorials in Mandarin</h2>
+        <p>
+          For my 2019 Processing Foundation Fellowship, I made Qtv, a channel of one-minute p5.js
+          tutorials in Mandarin for women learning to code in China. It started with trying to teach
+          my mom to code. Watch on <a href="https://space.bilibili.com/442343394">Bilibili</a>,
+          <a href="https://www.youtube.com/channel/UCzMs9qg50AW2LEpLDzHT5NA">YouTube</a>, or
+          <a href="https://www.instagram.com/q_tv_/">Instagram</a>.
+        </p>
+      </div>
+      <div class="tiles">
+        <a class="card" href={qtv.data.link}>
+          <Image
+            src={getThumbnail(qtv.data.thumbnail!)}
+            alt=""
+            widths={[400, 800]}
+            quality={60}
+            sizes="(max-width: 767px) 50vw, (max-width: 1099px) 25vw, 16vw"
+          />
+          <span class="title">Interview: p5.js Tutorials for Womxn in China</span>
+          <span class="meta">Processing Foundation, 2019</span>
+        </a>
+      </div>
+    </section>
   </main>
 </BaseLayout>
 
 <style>
   .teaching {
     padding-top: var(--gap);
-    min-height: 50vh;
   }
-  .text {
+  .block {
+    row-gap: calc(var(--gap) * 2);
+  }
+  .block + .block {
+    margin-top: calc(var(--gap) * 4);
+  }
+  /* Less space between the "under construction" note and the first section */
+  .note-block + .block {
+    margin-top: calc(var(--gap) * 2);
+  }
+  /* Links to #usc and #qtv stop a little below the top of the window */
+  section[id] {
+    scroll-margin-top: var(--gap);
+  }
+
+  /* Text on the left, tiles on the right (small tiles: the source images are low resolution).
+     Phone: text, then tiles two across.
+     Tablet: text in the left half, tiles two across in the right half.
+     Desktop: text in the left half, tiles three across in the right half. */
+  .text-col,
+  .tiles {
     grid-column: 1 / -1;
   }
+  .tiles {
+    display: grid;
+    grid-template-columns: subgrid;
+    row-gap: calc(var(--gap) * 2);
+    align-content: start;
+  }
+  .card {
+    grid-column: span 2;
+  }
   @media (min-width: 768px) {
-    .text {
-      grid-column: 1 / span 4;
+    .text-col {
+      grid-column: 1 / span 6;
+    }
+    .tiles {
+      grid-column: 7 / -1;
+    }
+    .card {
+      grid-column: span 3;
     }
   }
-  h1 {
+  @media (min-width: 1100px) {
+    .card {
+      grid-column: span 2;
+    }
+  }
+  /* Course list sits between the paragraphs, with paragraph spacing */
+  .courses {
+    margin-block: 1em;
+  }
+
+  h2 {
     margin: 0 0 0.75em;
     font-size: inherit;
     font-weight: 500;
+  }
+  .text-col p + p {
+    margin-top: 1em;
+  }
+  .note {
+    color: var(--muted);
+  }
+  .course + .course {
+    margin-top: 0.75em;
+  }
+  .course p + p {
+    margin-top: 0;
+  }
+  .meta {
+    color: var(--muted);
+  }
+
+  /* Tiles: same as the homepage thumbnails */
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .card .title {
+    font-weight: 500;
+  }
+  .card .meta {
+    font-size: 0.9em;
+  }
+  .card:hover .title {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
   }
 </style>
