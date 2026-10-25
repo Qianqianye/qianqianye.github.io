@@ -3,7 +3,7 @@
 const navLinks = [
   { href: '/about.html', label: 'About' },
   { href: '/', label: 'Works' },
-  { href: 'https://qianqianye.github.io/Everyday/', label: 'Experiment' },
+  { href: '/experiment.html', label: 'Experiment' },
   { href: '/teaching.html', label: 'Teaching' },
 ];
 
@@ -19,9 +19,11 @@ const socialLinks = [
 const path = Astro.url.pathname;
 const current = path.startsWith('/about')
   ? '/about.html'
-  : path.startsWith('/teaching')
-    ? '/teaching.html'
-    : '/';
+  : path.startsWith('/experiment')
+    ? '/experiment.html'
+    : path.startsWith('/teaching')
+      ? '/teaching.html'
+      : '/';
 ---
 
 <header class="site-header grid">

@@ -50,15 +50,31 @@ Everything below the media line goes in the right column.
 - Project page images go in `public/images/` and are referenced starting with `/images/`.
 - Embedded videos (`<iframe>`) take `class="wide"` (16:9), `"square"` (1:1) or `"vertical"` (portrait) to keep their proportions.
 
+## Add an experiment
+
+Experiments (the Experiment page) are listed in `src/content/experiments.yaml`, in the order they appear on the page. For example, at the top:
+
+```yaml
+- year: 2025
+  title: "Sketch title"
+  tools: "p5.js"
+  thumbnail: "my-sketch.gif"   # file name in src/assets/experiments/
+  url: "https://editor.p5js.org/..."
+```
+
+Tiles appear in the same order as the file. The 2016–2018 sketches live in the [Everyday repo](https://github.com/Qianqianye/Everyday); their `day` field is the sketch number and isn't shown.
+
 ## Structure
 
 - `src/content/projects/` — one Markdown file per project
 - `src/content/bio.md` — the short bio on the homepage
+- `src/content/experiments.yaml` — the list on the Experiment page
 - `src/styles/tokens.css` — grid, font, sizes and colors used by every page
 - `src/styles/base.css` — base element styles (body, links, images)
 - `src/pages/[slug].astro` — template for every project page
 - `src/pages/index.astro` — homepage: bio + project grid
 - `src/pages/archive.astro` — every project, including hidden ones
+- `src/pages/experiment.astro` — Experiment page, built from experiments.yaml
 - `src/pages/about.astro`, `teaching.astro` — other pages
 - `src/layouts/BaseLayout.astro` — `<head>`, meta/social tags, header and footer for every page
 - `src/components/Header.astro` — name, nav, social links (edit once, applies everywhere)
