@@ -5,6 +5,7 @@ year: "2017"
 category: "3D"
 thumbnail: "qianqian-ye-3dscan.gif"
 order: 300
+hidden: true
 ---
 
 It all started after I had myself 3D scanned in [Itseez3d App](http://itseez3d.com/). I am currently doing some 3D/VR visual experimental projects using this model. I might have built a special bond with the "3D Scanned Myself" already.

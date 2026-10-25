@@ -1,9 +1,10 @@
 ---
 title: "PhobiaVR"
 year: "2017"
-category: "Virtual Reality"
+category: "VR"
 thumbnail: "phobiavr-logo.jpg"
 order: 90
+hidden: true
 ---
 
 'PhobiaVR' is an App that helps you get over your phobia in Virtual Reality.

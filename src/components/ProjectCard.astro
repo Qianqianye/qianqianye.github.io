@@ -11,8 +11,13 @@ interface Props {
 }
 
 const { project, eager = false } = Astro.props;
-const { title, cardTitle, category, thumbnail, link } = project.data;
+const { title, cardTitle, category, year, thumbnail, link } = project.data;
 const href = link ?? `/${project.id}.html`;
+// Label under the image: "Category · Year" (first year only, e.g. "2021, ongoing" → "2021")
+const label = [category, year?.match(/\d{4}/)?.[0]].filter(Boolean).join(' · ');
+// Animated GIFs are heavy, so they get stronger compression; still images stay sharper.
+// (Astro never enlarges past the original, so the 1200px version only exists for large originals.)
+const isGif = thumbnail?.toLowerCase().endsWith('.gif');
 ---
 
 <a class="card" href={href}>
@@ -21,8 +26,8 @@ const href = link ?? `/${project.id}.html`;
       <Image
         src={getThumbnail(thumbnail)}
         alt=""
-        widths={[400, 800]}
-        quality={60}
+        widths={[400, 800, 1200]}
+        quality={isGif ? 60 : 80}
         sizes="(max-width: 767px) 100vw, (max-width: 1099px) 50vw, 33vw"
         loading={eager ? 'eager' : 'lazy'}
         fetchpriority={eager ? 'high' : 'auto'}
@@ -30,7 +35,7 @@ const href = link ?? `/${project.id}.html`;
     )
   }
   <span class="title">{cardTitle ?? title}</span>
-  {category && <span class="category">{category}</span>}
+  {label && <span class="category">{label}</span>}
 </a>
 
 <style>

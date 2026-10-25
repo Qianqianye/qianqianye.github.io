@@ -1,7 +1,7 @@
 ---
 title: "VR Supper Club"
 year: "2017"
-category: "Virtual Reality"
+category: "VR Performance"
 thumbnail: "supper-club.gif"
 order: 100
 ---

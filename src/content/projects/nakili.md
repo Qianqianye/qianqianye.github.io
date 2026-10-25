@@ -1,7 +1,7 @@
 ---
 title: "Nakili"
 year: "2021, ongoing"
-category: "Kai-Hai Series"
+category: "AR Sculpture · Kai-Hai Series"
 thumbnail: "qianqian-ye-nakili-logo.gif"
 order: 160
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Do Machines Dream of Magic?"
 year: "2023, ongoing"
-category: "AI Witchcraft"
+category: "AI Witchcraft on Web"
 thumbnail: "dmdm-logo.gif"
 order: 10
 ---

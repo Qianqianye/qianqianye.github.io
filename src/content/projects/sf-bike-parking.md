@@ -1,5 +1,6 @@
 ---
 title: "SF Bike Parking"
+year: "2016"
 category: "Data Visualization"
 thumbnail: "qianqian-ye-SF_bikeparking.gif"
 order: 410

@@ -1,7 +1,7 @@
 ---
 title: "Braiding Rage 怒辫"
 year: "2022"
-category: "3D"
+category: "3D Sculpture"
 thumbnail: "braiding-rage-logo.jpg"
 order: 170
 ---

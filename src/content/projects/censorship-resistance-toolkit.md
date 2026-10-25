@@ -1,6 +1,7 @@
 ---
 title: "Censorship Resistance Toolkit"
-category: "Creative Tool Design & Development"
+year: "2020"
+category: "Creative Tool"
 thumbnail: "censorship-toolkit-logo.gif"
 order: 40
 link: "https://qianqian-ye.com/algorithmic-censorship-resistance-toolkit/"

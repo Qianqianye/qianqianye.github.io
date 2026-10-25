@@ -1,7 +1,7 @@
 ---
 title: "D-brane"
 year: "2018"
-category: "Interactive Performance"
+category: "AR Performance"
 thumbnail: "qianqian-ye-ar-d-brane-logo.gif"
 order: 80
 ---

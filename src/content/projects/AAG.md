@@ -1,7 +1,7 @@
 ---
 title: "A.A.G"
 year: "2021, ongoing"
-category: "Kai-Hai Series"
+category: "VR Sculpture · Kai-Hai Series"
 thumbnail: "qianqian-ye-aag-logo.png"
 order: 150
 ---

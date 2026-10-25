@@ -4,6 +4,7 @@ year: "2017"
 category: "IoT"
 thumbnail: "qianqian-ye-led-light-logo.gif"
 order: 330
+hidden: true
 ---
 
 NeoPixel LED strip and ESP8266 Wifi chip have been widely used in a lot of my lighting installations and gadgets. I was challenged to design an elegant web application interface to make this lighting solution more user friendly.

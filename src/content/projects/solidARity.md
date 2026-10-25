@@ -1,7 +1,7 @@
 ---
 title: "solidARity"
 year: "2020"
-category: "Augmented Reality"
+category: "AR"
 thumbnail: "qianqian-ye-solidARity-logo.gif"
 order: 260
 ---

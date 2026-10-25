@@ -5,6 +5,7 @@ year: "2017"
 category: "IoT"
 thumbnail: "qianqian-ye-smart-home-logo.gif"
 order: 110
+hidden: true
 ---
 
 Smart devices claim to make our home life easier, but users quickly become overwhelmed by the large amount of apps and settings. I was challenged to design a solution to bring simplicity and playfulness to smart home interface.
