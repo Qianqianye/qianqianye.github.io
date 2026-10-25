@@ -1,0 +1,333 @@
+# Experiment page (/experiment.html). Tiles appear in the same order as this list.
+# Thumbnails live in src/assets/experiments/.
+#
+# New sketch (put it where you want it to appear, e.g. at the top):
+# - year: 2025
+#   title: "Sketch title"
+#   tools: "p5.js"
+#   thumbnail: "my-sketch.gif"
+#   url: "https://editor.p5js.org/..."
+#
+# `day` on the older entries is the Everyday sketch number (folder DayXX); it isn't shown.
+
+- day: 46
+  year: 2018
+  title: "Shan Shui II"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-46-ink.gif"
+  url: "https://qianqianye.github.io/Everyday/Day46/"
+
+- day: 45
+  year: 2018
+  title: "Shan Shui"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-45-ink.gif"
+  url: "https://qianqianye.github.io/Everyday/Day45/"
+
+- day: 44
+  year: 2017
+  title: "Superwoman"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-44-superwoman-p5js.gif"
+  url: "https://qianqianye.github.io/Everyday/Day44/"
+
+- day: 43
+  year: 2017
+  title: "Not Just A Dress"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-43-feminism-p5js.gif"
+  url: "https://qianqianye.github.io/Everyday/Day43/"
+
+- day: 42
+  year: 2017
+  title: "Poem Matrix"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-42-poem-matrix-p5js.gif"
+  url: "https://qianqianye.github.io/Everyday/Day42/"
+
+- day: 41
+  year: 2017
+  title: "Fluid"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-41.gif"
+  url: "https://qianqianye.github.io/Everyday/Day41/"
+
+- day: 40
+  year: 2016
+  title: "Floating Polygon"
+  tools: "WebVR, Three.js"
+  thumbnail: "qianqian-ye-40.gif"
+  url: "https://qianqianye.github.io/Everyday/Day40/"
+
+- day: 39
+  year: 2016
+  title: "Fractal"
+  tools: "C#, Unity3D"
+  thumbnail: "qianqian-ye-39.gif"
+  url: "https://qianqianye.github.io/Everyday/Day39/"
+
+- day: 38
+  year: 2016
+  title: "Neon"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-38.gif"
+  url: "https://qianqianye.github.io/Everyday/Day38/"
+
+- day: 37
+  year: 2016
+  title: "Rubik"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-37.gif"
+  url: "https://qianqianye.github.io/Everyday/Day37/"
+
+- day: 36
+  year: 2016
+  title: "Metropolis"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-36.gif"
+  url: "https://qianqianye.github.io/Everyday/Day36/"
+
+- day: 35
+  year: 2016
+  title: "Poly"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-35.gif"
+  url: "https://qianqianye.github.io/Everyday/Day35/"
+
+- day: 34
+  year: 2016
+  title: "Cosmologist"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-34.gif"
+  url: "https://qianqianye.github.io/Everyday/Day34/"
+
+- day: 33
+  year: 2016
+  title: "Jelly Body"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-33.gif"
+  url: "https://qianqianye.github.io/Everyday/Day33/"
+
+- day: 32
+  year: 2016
+  title: "Brain Firework"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-32.gif"
+  url: "https://qianqianye.github.io/Everyday/Day32/"
+
+- day: 31
+  year: 2016
+  title: "Bloosm"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-31.gif"
+  url: "https://qianqianye.github.io/Everyday/Day31/"
+
+- day: 30
+  year: 2016
+  title: "Net"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-30.gif"
+  url: "https://qianqianye.github.io/Everyday/Day30/"
+
+- day: 29
+  year: 2016
+  title: "Cafuné"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-29.gif"
+  url: "https://qianqianye.github.io/Everyday/Day29/"
+
+- day: 28
+  year: 2016
+  title: "Love Will Tear Us Apart"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-love_will_tear_us_apart.gif"
+  url: "https://qianqianye.github.io/Everyday/Day28/"
+
+- day: 27
+  year: 2016
+  title: "Petrichor"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-27.gif"
+  url: "https://qianqianye.github.io/Everyday/Day27/"
+
+- day: 26
+  year: 2016
+  title: "Wheel Throwing"
+  tools: "D3.js"
+  thumbnail: "qianqian-ye-26.gif"
+  url: "https://qianqianye.github.io/Everyday/Day26/"
+
+- day: 25
+  year: 2016
+  title: "Nodes & Links"
+  tools: "D3.js"
+  thumbnail: "qianqian-ye-25.gif"
+  url: "https://qianqianye.github.io/Everyday/Day25/"
+
+- day: 24
+  year: 2016
+  title: "Bubbbbles"
+  tools: "D3.js"
+  thumbnail: "qianqian-ye-24.gif"
+  url: "https://qianqianye.github.io/Everyday/Day24/"
+
+- day: 23
+  year: 2016
+  title: "Le Ballon rouge"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-23.gif"
+  url: "https://qianqianye.github.io/Everyday/Day23/"
+
+- day: 22
+  year: 2016
+  title: "Mirror Heart"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-mirror-heart.gif"
+  url: "https://qianqianye.github.io/Everyday/Day22/"
+
+- day: 21
+  year: 2016
+  title: "Aufheben"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-aufheben.gif"
+  url: "https://qianqianye.github.io/Everyday/Day21/"
+
+- day: 20
+  year: 2016
+  title: "unknown pleasures"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-20.gif"
+  url: "https://qianqianye.github.io/Everyday/Day20/"
+
+- day: 19
+  year: 2016
+  title: "Morphing"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-morphing.gif"
+  url: "https://qianqianye.github.io/Everyday/Day19/"
+
+- day: 18
+  year: 2016
+  title: "Follower"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-18.gif"
+  url: "https://qianqianye.github.io/Everyday/Day18/"
+
+- day: 17
+  year: 2016
+  title: "Fantome"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-spotlights.gif"
+  url: "https://qianqianye.github.io/Everyday/Day17/"
+
+- day: 16
+  year: 2016
+  title: "Soft Body"
+  tools: "Code for Fun"
+  thumbnail: "qianqian-ye-16.gif"
+  url: "https://qianqianye.github.io/Everyday/Day16/"
+
+- day: 15
+  year: 2016
+  title: "Pronounce My Name"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-15.gif"
+  url: "https://qianqianye.github.io/Everyday/Day15/"
+
+- day: 14
+  year: 2016
+  title: "Donut Birthday"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-14.gif"
+  url: "https://qianqianye.github.io/Everyday/Day14/"
+
+- day: 13
+  year: 2016
+  title: "Lévy Flight"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-levy-flight.gif"
+  url: "https://qianqianye.github.io/Everyday/Day13/"
+
+- day: 12
+  year: 2016
+  title: "Love Letter"
+  tools: "HTML, CSS"
+  thumbnail: "qianqian-ye-12.gif"
+  url: "https://qianqianye.github.io/Everyday/Day12/q_love_letter.html"
+
+- day: 11
+  year: 2016
+  title: "Pendulums"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-11.gif"
+  url: "https://qianqianye.github.io/Everyday/Day11/"
+
+- day: 10
+  year: 2016
+  title: "Dissolution"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-10.gif"
+  url: "https://qianqianye.github.io/Everyday/Day10/"
+
+- day: 9
+  year: 2016
+  title: "Chord Diagram"
+  tools: "D3.js"
+  thumbnail: "qianqian-ye-09.gif"
+  url: "https://qianqianye.github.io/Everyday/Day09/"
+
+- day: 8
+  year: 2016
+  title: "Particles"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-Particles_and_color_modes.gif"
+  url: "https://qianqianye.github.io/Everyday/Day08/"
+
+- day: 7
+  year: 2016
+  title: "Beta"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-07.gif"
+  url: "https://qianqianye.github.io/Everyday/Day07/"
+
+- day: 6
+  year: 2016
+  title: "Audio & Visual"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-06.gif"
+  url: "https://qianqianye.github.io/Everyday/Day06/"
+
+- day: 5
+  year: 2016
+  title: "Rains"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-05.gif"
+  url: "https://qianqianye.github.io/Everyday/Day05/"
+
+- day: 4
+  year: 2016
+  title: "Isometric Matrix"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-cube_matrix.gif"
+  url: "https://qianqianye.github.io/Everyday/Day04/"
+
+- day: 3
+  year: 2016
+  title: "Cubic"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-03.gif"
+  url: "https://qianqianye.github.io/Everyday/Day03/"
+
+- day: 2
+  year: 2016
+  title: "Tracing"
+  tools: "p5.js"
+  thumbnail: "qianqian-ye-02.gif"
+  url: "https://qianqianye.github.io/Everyday/Day02/"
+
+- day: 1
+  year: 2016
+  title: "Alpha"
+  tools: "Three.js"
+  thumbnail: "qianqian-ye-01.gif"
+  url: "https://qianqianye.github.io/Everyday/Day01/"
